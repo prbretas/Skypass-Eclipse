@@ -2,7 +2,7 @@ version: '3'
 
 volumes:
 
-  totvs-startech-pg-data: {}
+  skypass-pg-data: {}
 
 services:
 
@@ -10,18 +10,18 @@ services:
     image: postgres:11.5-alpine
     restart: always
     environment:
-      POSTGRES_DB: totvs-startech-dev
+      POSTGRES_DB: skypass-dev
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: totvs@123
+      POSTGRES_PASSWORD: skypass@123
     ports:
       - 5432:5432
     volumes:
-      - totvs-startech-pg-data:/var/lib/postgresql
+      - skypass-pg-data:/var/lib/postgresql
 
   totvs-startech-pg-admin:
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: dev@totvs.com.br
+      PGADMIN_DEFAULT_EMAIL: dev@skypass.com.br
       PGADMIN_DEFAULT_PASSWORD: dev
     ports:
       - 8000:80

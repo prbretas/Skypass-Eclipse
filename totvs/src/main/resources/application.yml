@@ -9,9 +9,9 @@ spring:
   profiles: dev
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/totvs-startech-dev
+    url: jdbc:postgresql://localhost:5432/skypass-dev
     username: postgres
-    password: totvs@123
+    password: skypass@123
 
   jpa:
     show-sql: true  
