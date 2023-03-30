@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
-import br.com.totvs.cliente.model.repository.ClienteView;
+import br.com.totvs.client.model.repository.ClientView;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -38,7 +38,7 @@ public class DocumentoVendaView implements Serializable {
 	@OneToOne
 	@NotFound(action = NotFoundAction.IGNORE)
 	@JoinColumn(name = "clienteId", referencedColumnName = "id", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT), insertable = false, updatable = false)
-	private ClienteView cliente;
+	private ClientView cliente;
 
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "documentoVendaId")
