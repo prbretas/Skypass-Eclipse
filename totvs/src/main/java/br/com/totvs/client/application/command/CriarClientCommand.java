@@ -14,4 +14,5 @@ public class CriarClientCommand {
 	private String email;
 	private String password;
 	private String birthdate;
+	private String addressId;
 }

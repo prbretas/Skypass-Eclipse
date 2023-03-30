@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "cliente")
+@Table(name = "client")
 public class Client {
 	@Id
 	private String id;
@@ -24,9 +24,11 @@ public class Client {
 	private String password;
 	private String birthdate;
 	private boolean ativo;
+	
+	private String addressId; //fk_address
 
 	@Builder
-	private Client(String id, String userName, String name, String lastName, String numReg,String phone, String email, String password, String birthdate) {
+	private Client(String id, String userName, String name, String lastName, String numReg,String phone, String email, String password, String birthdate, String addressId) {
 		this.id = id;
 		this.userName = userName;
 		this.name = name;
@@ -36,6 +38,8 @@ public class Client {
 		this.email = email;
 		this.password = password;
 		this.birthdate = birthdate;
+		this.addressId = addressId;
+		
 		this.ativo = true;
 	}
 	

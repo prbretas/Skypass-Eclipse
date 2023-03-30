@@ -34,18 +34,34 @@ public class ClientController {
 
 	@PostMapping
 	public String criar(@RequestBody CriarClientDTO clientDTO) {
-		CriarClientCommand command = CriarClientCommand.builder().userName(clientDTO.getUserName()).name(clientDTO.getName())
-				.lastName(clientDTO.getLastName()).numReg(clientDTO.getNumReg()).phone(clientDTO.getPhone())
-				.email(clientDTO.getPhone()).password(clientDTO.getPassword()).birthdate(clientDTO.getBirthdate()).build();
+		CriarClientCommand command = CriarClientCommand.builder()
+				.userName(clientDTO.getUserName())
+				.name(clientDTO.getName())
+				.lastName(clientDTO.getLastName())
+				.numReg(clientDTO.getNumReg())
+				.phone(clientDTO.getPhone())
+				.email(clientDTO.getPhone())
+				.password(clientDTO.getPassword())
+				.birthdate(clientDTO.getBirthdate())
+				.addressId(clientDTO.getAddressId())
+				.build();
 
 		return clientApp.criar(command);
 	}
 
 	@PostMapping(path = "/{id}/alterar")
 	public ResponseEntity<Void> alterar(@PathVariable String id, @RequestBody AlterarClientDTO clientDTO) {
-		AlterarClientCommand command = AlterarClientCommand.builder().id(id).userName(clientDTO.getUserName()).name(clientDTO.getName())
-				.lastName(clientDTO.getLastName()).numReg(clientDTO.getNumReg()).phone(clientDTO.getPhone())
-				.email(clientDTO.getPhone()).password(clientDTO.getPassword()).birthdate(clientDTO.getBirthdate()).build();
+		AlterarClientCommand command = AlterarClientCommand.builder()
+				.id(id).userName(clientDTO.getUserName())
+				.name(clientDTO.getName())
+				.lastName(clientDTO.getLastName())
+				.numReg(clientDTO.getNumReg())
+				.phone(clientDTO.getPhone())
+				.email(clientDTO.getPhone())
+				.password(clientDTO.getPassword())
+				.birthdate(clientDTO.getBirthdate())
+				.addressId(clientDTO.getAddressId())				
+				.build();
 
 		clientApp.alterar(command);
 

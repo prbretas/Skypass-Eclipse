@@ -19,4 +19,6 @@ public class AlterarClientDTO {
 	private String email;
 	private String password;
 	private String birthdate;
+	private String addressId;
+	
 }

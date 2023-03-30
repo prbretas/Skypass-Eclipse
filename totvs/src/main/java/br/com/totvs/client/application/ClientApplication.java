@@ -29,6 +29,7 @@ public class ClientApplication {
 				.email(criarClientCommand.getEmail())
 				.password(criarClientCommand.getPassword())
 				.birthdate(criarClientCommand.getBirthdate())
+				.addressId(criarClientCommand.getAddressId())
 				.build();
 
 		this.repository.save(client);
@@ -46,6 +47,7 @@ public class ClientApplication {
 			client.setEmail(alterarClientCommand.getEmail());
 			client.setPassword(alterarClientCommand.getPassword());
 			client.setBirthdate(alterarClientCommand.getBirthdate());
+			client.setAddressId(alterarClientCommand.getAddressId());
 
 			this.repository.save(client);
 		});

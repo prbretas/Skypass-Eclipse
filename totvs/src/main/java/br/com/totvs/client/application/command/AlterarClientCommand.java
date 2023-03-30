@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 @Builder
 public class AlterarClientCommand {
+	private String id;
 	private String userName;
 	private String name;
 	private String lastName;
@@ -14,4 +15,5 @@ public class AlterarClientCommand {
 	private String email;
 	private String password;
 	private String birthdate;
+	private String addressId;
 }
