@@ -24,6 +24,7 @@ public class AddressView implements Serializable {
 	private String id;
 	private String street;
 	private int number;
+	private String addInfo;
 	private String city;
 	private String state;
 	private String stateCode;

@@ -24,6 +24,7 @@ public class AddressApplication {
 		Address address = Address.builder().id(UUID.randomUUID().toString())
 				.street(criarAddressCommand.getStreet())
 				.number(criarAddressCommand.getNumber())
+				.addInfo(criarAddressCommand.getAddInfo())
 				.city(criarAddressCommand.getCity())
 				.state(criarAddressCommand.getState())
 				.stateCode(criarAddressCommand.getStateCode())
@@ -39,6 +40,7 @@ public class AddressApplication {
 		this.repository.findById(alterarAddressCommand.getId()).ifPresent(address -> {
 			address.setStreet(alterarAddressCommand.getStreet());
 			address.setNumber(alterarAddressCommand.getNumber());
+			address.setAddInfo(alterarAddressCommand.getAddInfo());
 			address.setCity(alterarAddressCommand.getCity());
 			address.setState(alterarAddressCommand.getState());
 			address.setStateCode(alterarAddressCommand.getStateCode());

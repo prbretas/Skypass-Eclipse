@@ -37,6 +37,7 @@ public class AddressController {
 		CriarAddressCommand command = CriarAddressCommand.builder()
 				.street(addressDTO.getStreet())
 				.number(addressDTO.getNumber())
+				.addInfo(addressDTO.getAddInfo())
 				.city(addressDTO.getCity())
 				.state(addressDTO.getState())
 				.stateCode(addressDTO.getStateCode())
@@ -47,12 +48,13 @@ public class AddressController {
 		return addressApp.criar(command);
 	}
 
-	@PostMapping(path = "/{id}/alterar")
+	@PostMapping(path = "/{id}/update")
 	public ResponseEntity<Void> alterar(@PathVariable String id, @RequestBody AlterarAddressDTO addressDTO) {
 		AlterarAddressCommand command = AlterarAddressCommand.builder()
 				.id(id)
 				.street(addressDTO.getStreet())
 				.number(addressDTO.getNumber())
+				.addInfo(addressDTO.getAddInfo())
 				.city(addressDTO.getCity())
 				.state(addressDTO.getState())
 				.stateCode(addressDTO.getStateCode())

@@ -17,6 +17,7 @@ public class Address {
 	private String id;
 	private String street;
 	private int number;
+	private String addInfo;
 	private String city;
 	private String state;
 	private String stateCode;
@@ -26,11 +27,12 @@ public class Address {
 
 	@Builder
 	private Address(String id,
-			String street, int number, String city, String state,String stateCode,
+			String street, int number, String addInfo, String city, String state,String stateCode,
 			String zipCode, String country) {
 		this.id = id;
 		this.street = street;
 		this.number = number;
+		this.addInfo = addInfo;
 		this.city = city;
 		this.state = state;
 		this.stateCode = stateCode;

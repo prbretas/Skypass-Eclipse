@@ -8,6 +8,7 @@ import lombok.Data;
 public class CriarAddressCommand {
 	private String street;
 	private int number;
+	private String addInfo;
 	private String city;
 	private String state;
 	private String stateCode;
