@@ -144,12 +144,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/addresses/1/ativar",
+							"raw": "http://localhost:8888/api/v1/addresses/1/ativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -195,12 +195,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/aircrafts",
+							"raw": "http://localhost:8888/api/v1/aircrafts",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -216,12 +216,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/aircrafts/1",
+							"raw": "http://localhost:8888/api/v1/aircrafts/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -238,12 +238,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/aircrafts/1/delete",
+							"raw": "http://localhost:8888/api/v1/aircrafts/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -262,7 +262,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"model\": \"AIRBUS-737\",\r\n  \"numSerie\": \"01234\",\r\n  \"infoSystem\": \"AIRBUS-737\",\r\n  \"latitude\": \"01010101\",\r\n  \"longitude\": \"02020202\",\r\n  \"cargoWeight\": 200,\r\n\r\n\r\n  \"seats\": [{\r\n  \"seatName\": \"011-A\",\r\n  \"category\": 0,\r\n   \"idAircraft\": {\"idAircraft\": 1}\r\n\r\n},\r\n{\r\n  \"seatName\": \"042-A\",\r\n  \"category\": 1,\r\n  \"idAircraft\": {\"idAircraft\": 1}\r\n\r\n},\r\n{\r\n  \"seatName\": \"043-A\",\r\n  \"category\": 2,\r\n  \"idAircraft\": {\"idAircraft\": 1}\r\n\r\n}]\r\n  }",
+							"raw": "{\r\n  \"model\": \"AIRBUS-737\",\r\n  \"numSerie\": \"01234\",\r\n  \"infoSystem\": \"AIRBUS-737\",\r\n  \"latitude\": \"01010101\",\r\n  \"longitude\": \"02020202\",\r\n  \"cargoWeight\": 200\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -270,12 +270,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/aircrafts",
+							"raw": "http://localhost:8888/api/v1/aircrafts",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -292,7 +292,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"12\",\r\n  \"idAirline\": 5125,\r\n  \"model\": \"6549546\",\r\n  \"numSerie\": \"6549546\",\r\n  \"infoSystem\": \"6549546\",\r\n  \"latitude\": \"6549546\",\r\n  \"longitude\": \"6549546\",\r\n  \"numSeats\": \"210\",\r\n  \"cargoWeight\": 0\r\n  }",
+							"raw": "{\r\n  \"id\": \"12\",\r\n  \"model\": \"6549546\",\r\n  \"numSerie\": \"6549546\",\r\n  \"infoSystem\": \"6549546\",\r\n  \"latitude\": \"6549546\",\r\n  \"longitude\": \"6549546\",\r\n  \"cargoWeight\": 0\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -300,12 +300,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/aircrafts/1/update",
+							"raw": "http://localhost:8888/api/v1/aircrafts/1/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -323,12 +323,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/aircrafts/1/ativar",
+							"raw": "http://localhost:8888/api/v1/aircrafts/1/ativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -346,12 +346,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/aircrafts/1/inativar",
+							"raw": "http://localhost:8888/api/v1/aircrafts/1/inativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -417,12 +417,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airlines/1/delete",
+							"raw": "http://localhost:8888/api/v1/airlines/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -553,12 +553,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airports",
+							"raw": "http://localhost:8888/api/v1/airports",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -574,12 +574,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airports/1",
+							"raw": "http://localhost:8888/api/v1/airports/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -596,12 +596,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airports/12/delete",
+							"raw": "http://localhost:8888/api/v1/airports/12/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -620,7 +620,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"name\": \"SANTOS DUMMONT\",\r\n  \"iataCode\": \"SDU\",\r\n  \"phone\": \"+55213004-6050\",\r\n  \"email\": \"santosdummont.aeroporto@gmail.com\",\r\n\"idAddress\": {\r\n        \"street\": \"Rua 123\",\r\n        \"number\": \"623\",\r\n        \"addInfo\": \"Glória\",\r\n        \"city\": \"Rio de Janeiro\",\r\n        \"state\": \"Rio de Janeiro\",\r\n        \"stateCode\": \"RJ\",\r\n        \"zipCode\": \"20825-410\",\r\n        \"country\": \"Brasil\",\r\n        \"ativo\": true\r\n        }\r\n}\r\n",
+							"raw": "{\r\n\r\n  \"name\": \"SANTOS DUMMONT\",\r\n  \"iataCode\": \"SDU\",\r\n  \"phone\": \"+55213004-6050\",\r\n  \"email\": \"santosdummont.aeroporto@gmail.com\",\r\n  \"addressId\": \"\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -628,12 +628,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airports",
+							"raw": "http://localhost:8888/api/v1/airports",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -658,12 +658,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airports/1/update",
+							"raw": "http://localhost:8888/api/v1/airports/1/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -681,12 +681,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airports/1/ativar",
+							"raw": "http://localhost:8888/api/v1/airports/1/ativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -704,12 +704,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/airports/1/inativar",
+							"raw": "http://localhost:8888/api/v1/airports/1/inativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -742,6 +742,88 @@
 								"api",
 								"v1",
 								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - CLIENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/clients?userName=user1123&name=Rodrigo&lastName=Gomes&numReg=9848465-9&phone=+55(47)12345-6789&email=rodgomes42@gmail.com&birthdate=1986-05-26&addressId=Rua",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "user1123"
+								},
+								{
+									"key": "name",
+									"value": "Rodrigo"
+								},
+								{
+									"key": "lastName",
+									"value": "Gomes"
+								},
+								{
+									"key": "numReg",
+									"value": "9848465-9"
+								},
+								{
+									"key": "phone",
+									"value": "+55(47)12345-6789"
+								},
+								{
+									"key": "email",
+									"value": "rodgomes42@gmail.com"
+								},
+								{
+									"key": "birthdate",
+									"value": "1986-05-26"
+								},
+								{
+									"key": "addressId",
+									"value": "Rua"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - CLIENT Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/clientes?searchTerm=dri",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "dri"
+								}
 							]
 						}
 					},
@@ -799,7 +881,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"userName\": \"carlos14446\",\r\n  \"name\": \"Carlos\",\r\n  \"lastName\": \"da Silva\",\r\n  \"numReg\": \"146544447-7 SSP-SC\",\r\n  \"phone\": \"+5522978652616\",\r\n  \"email\": \"carlos41144@gmail.com\",\r\n  \"password\": \"65959\",\r\n  \"addressId\": \"1c996a0f-8f8e-4132-a891-75dd85c2d82d\",\r\n  \"birthdate\": \"1978-10-15\"  \r\n\r\n}",
+							"raw": "{\r\n  \"userName\": \"carlos14446\",\r\n  \"name\": \"Carlos\",\r\n  \"lastName\": \"da Silva\",\r\n  \"numReg\": \"146544447-7 SSP-SC\",\r\n  \"phone\": \"+5522978652616\",\r\n  \"email\": \"carlos41144@gmail.com\",\r\n  \"password\": \"65959\",\r\n  \"birthdate\": \"1978-10-15\",\r\n  \"addressId\": \"1c996a0f-8f8e-4132-a891-75dd85c2d82d\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -911,12 +993,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/flights",
+							"raw": "http://localhost:8888/api/v1/flights",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -932,12 +1014,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/flights/1",
+							"raw": "http://localhost:8888/api/v1/flights/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -954,12 +1036,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/flights/1/delete",
+							"raw": "http://localhost:8888/api/v1/flights/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -978,7 +1060,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"idAircraft\": 3125,\r\n\"idAirline\": 101,\r\n\"departurePlace\": 2, \r\n\"arrivalPlace\": 4,\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10\r\n}",
+							"raw": "{\r\n\"departurePlace\": \"\", \r\n\"arrivalPlace\": \"\",\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -986,12 +1068,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/flights",
+							"raw": "http://localhost:8888/api/v1/flights",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1008,7 +1090,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"12\",\r\n\"idAircraft\": 3125,\r\n\"idAirline\": 101,\r\n\"departurePlace\": 2, \r\n\"arrivalPlace\": 4,\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10\r\n  \r\n}",
+							"raw": "{\r\n\"id\": \"12\",\r\n\"departurePlace\": \"\", \r\n\"arrivalPlace\": \"\",\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10\r\n  \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1016,12 +1098,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/flights/1/update",
+							"raw": "http://localhost:8888/api/v1/flights/1/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1039,12 +1121,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/flights/1/ativar",
+							"raw": "http://localhost:8888/api/v1/flights/1/ativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1062,12 +1144,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/flights/1/inativar",
+							"raw": "http://localhost:8888/api/v1/flights/1/inativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1090,12 +1172,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/seats",
+							"raw": "http://localhost:8888/api/v1/seats",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1111,12 +1193,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/seats/1",
+							"raw": "http://localhost:8888/api/v1/seats/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1133,12 +1215,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/seats/1/delete",
+							"raw": "http://localhost:8888/api/v1/seats/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1165,12 +1247,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/seats",
+							"raw": "http://localhost:8888/api/v1/seats",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1195,12 +1277,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/seats/14/update",
+							"raw": "http://localhost:8888/api/v1/seats/14/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1218,12 +1300,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/seats/2/ativar",
+							"raw": "http://localhost:8888/api/v1/seats/2/ativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1241,12 +1323,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/seats/1/inativar",
+							"raw": "http://localhost:8888/api/v1/seats/1/inativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1269,12 +1351,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/tickets",
+							"raw": "http://localhost:8888/api/v1/tickets",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1290,12 +1372,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/tickets/1",
+							"raw": "http://localhost:8888/api/v1/tickets/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1312,12 +1394,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/tickets/1/delete",
+							"raw": "http://localhost:8888/api/v1/tickets/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1336,7 +1418,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"idClient\": 44456,\r\n\"idFlight\": 12345,\r\n\"idSeat\": \"079-B\",\r\n\"category\": 0,\r\n\"luggageAmount\": 2,\r\n\"luggageWeight\": 22,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99\r\n}",
+							"raw": "{\r\n\"category\": 0,\r\n\"luggageAmount\": 2,\r\n\"luggageWeight\": 22,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99,\r\n\r\n\"idClient\": 44456,\r\n\"idFlight\": 12345,\r\n\"idSeat\": \"079-B\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1344,12 +1426,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/tickets",
+							"raw": "http://localhost:8888/api/v1/tickets",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1366,7 +1448,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"12\",\r\n\"idClient\": 44456,\r\n\"idFlight\": 12345,\r\n\"idSeat\": \"079-B\",\r\n\"category\": 0,\r\n\"luggageAmount\": 2,\r\n\"luggageWeight\": 22,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99\r\n}",
+							"raw": "{\r\n  \"id\": \"12\",\r\n\"category\": 0,\r\n\"luggageAmount\": 2,\r\n\"luggageWeight\": 22,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99,\r\n\r\n\"idClient\": 44456,\r\n\"idFlight\": 12345,\r\n\"idSeat\": \"079-B\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1374,12 +1456,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/tickets/1/update",
+							"raw": "http://localhost:8888/api/v1/tickets/1/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1397,12 +1479,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/tickets/1/ativar",
+							"raw": "http://localhost:8888/api/v1/tickets/1/ativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -1420,12 +1502,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/tickets/1/inativar",
+							"raw": "http://localhost:8888/api/v1/tickets/1/inativar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
