@@ -26,11 +26,6 @@ Uma API para gerenciar um sistema de passagens aéreas, onde o objetivo é a ven
 <a href="https://miro.com/welcomeonboard/REl6MnhVcmVKTDBERzVpVDRPWEJqSkM5WUh5UVRMU2VxM3UwYXZTbnYxT1lFb1BsT0xrWVI4ekM4OEREUGxvMHwzNDU4NzY0NTQ0MTc2MDgyOTcxfDI=?share_link_id=810734589044">FLUXOGRAMA - MIRO</a>
 
 
-
-
-<img style="width: 400px; height:300px" src="Fluxograma_Skypass_Flights.jpg"/>
-
-
  # Autores
 
 | [<img src="https://avatars.githubusercontent.com/u/92703482?v=4" width=115><br><sub>***Dener Rodrigo Corrêa***</sub>](https://github.com/DRC43) |  [<img src="https://avatars.githubusercontent.com/u/86687733?v=4" width=115><br><sub>***Philippe R. Bretas***</sub>](https://github.com/prbretas) |  [<img src="https://avatars.githubusercontent.com/u/90099405?v=4" width=115><br><sub>***Lucas Eduardo Ferreira***</sub>](https://github.com/Luxiosis) |
