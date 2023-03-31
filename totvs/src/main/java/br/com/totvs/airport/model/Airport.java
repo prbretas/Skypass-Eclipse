@@ -1,4 +1,4 @@
-package br.com.totvs.client.model;
+package br.com.totvs.airport.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,37 +11,26 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "client")
-public class Client {
+@Table(name = "airport")
+public class Airport {
 	@Id
 	private String id;
-	private String userName;
-	private String name;
-	private String lastName;
+	private String companyName;
 	private String numReg;
 	private String phone;
 	private String email;
-	private String password;
-	private String birthdate;
 	private boolean ativo;
 	
 	private String addressId; //fk_address
 
 	@Builder
-	private Client(String id, String userName, String name,
-			String lastName, String numReg,String phone, String email,
-			String password, String birthdate, String addressId) {
+	private Airport(String id,String companyName, String numReg, String phone, String email, String addressId) {
 		this.id = id;
-		this.userName = userName;
-		this.name = name;
-		this.lastName = lastName;
+		this.companyName = companyName;
 		this.numReg = numReg;
 		this.phone = phone;
 		this.email = email;
-		this.password = password;
-		this.birthdate = birthdate;
 		this.addressId = addressId;
-		
 		this.ativo = true;
 	}
 	

@@ -1,0 +1,65 @@
+package br.com.totvs.airport.model.repository;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+
+import org.springframework.data.jpa.domain.Specification;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class AirportSpecification {
+	
+	public static Specification<AirportView> queContenhaCompanyNameCom(String companyName) {
+		return new Specification<AirportView>() {
+
+			private static final long serialVersionUID = -2152102211884913166L;
+
+			public Predicate toPredicate(Root<AirportView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
+				return builder.like(builder.upper(root.get("companyName")), likeTerm(companyName.trim().toUpperCase()));
+			}
+		};
+	}
+	
+		
+	public static Specification<AirportView> queContenhaNumRegCom(String numReg) {
+		return new Specification<AirportView>() {
+
+			private static final long serialVersionUID = 1110943931371013169L;
+
+			public Predicate toPredicate(Root<AirportView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
+				return builder.like(builder.upper(root.get("numReg")), likeTerm(numReg.trim().toUpperCase()));
+			}
+		};
+	}
+		
+	public static Specification<AirportView> queContenhaPhoneCom(String phone) {
+		return new Specification<AirportView>() {
+
+			private static final long serialVersionUID = -8004274870509890272L;
+
+			public Predicate toPredicate(Root<AirportView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
+				return builder.like(builder.upper(root.get("phone")), likeTerm(phone.trim().toUpperCase()));
+			}
+		};
+	}
+
+	public static Specification<AirportView> queContenhaEmailCom(String email) {
+		return new Specification<AirportView>() {
+			
+			private static final long serialVersionUID = -1953330972125926784L;
+
+			public Predicate toPredicate(Root<AirportView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
+				return builder.like(builder.upper(root.get("email")), likeTerm(email.trim().toUpperCase()));
+			}
+		};
+	}
+	
+	
+	private static String likeTerm(String term) {
+		return new StringBuilder().append('%').append(term).append('%').toString();
+	}
+}
