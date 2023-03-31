@@ -21,8 +21,8 @@ public class AirportApplication {
 
 	public String criar(CriarAirportCommand criarAirportCommand) {
 		Airport airport = Airport.builder().id(UUID.randomUUID().toString())
-				.companyName(criarAirportCommand.getCompanyName())
-				.numReg(criarAirportCommand.getNumReg())
+				.airportName(criarAirportCommand.getAirportName())
+				.iataCode(criarAirportCommand.getIataCode())
 				.phone(criarAirportCommand.getPhone())
 				.email(criarAirportCommand.getEmail())	
 				.addressId(criarAirportCommand.getAddressId())
@@ -34,8 +34,8 @@ public class AirportApplication {
 
 	public void alterar(AlterarAirportCommand alterarAirportCommand) {
 		this.repository.findById(alterarAirportCommand.getId()).ifPresent(airport -> {
-			airport.setCompanyName(alterarAirportCommand.getCompanyName());
-			airport.setNumReg(alterarAirportCommand.getNumReg());
+			airport.setAirportName(alterarAirportCommand.getAirportName());
+			airport.setIataCode(alterarAirportCommand.getIataCode());
 			airport.setPhone(alterarAirportCommand.getPhone());
 			airport.setEmail(alterarAirportCommand.getEmail());
 			airport.setAddressId(alterarAirportCommand.getAddressId());

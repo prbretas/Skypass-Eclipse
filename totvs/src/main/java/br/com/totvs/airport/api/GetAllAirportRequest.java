@@ -20,18 +20,18 @@ public class GetAllAirportRequest {
 		Specification<AirportView> specs = Specification.where(null);
 
 		if (hasText(this.searchTerm)) {
-			specs = specs.or(AirportSpecification.queContenhaCompanyNameCom(this.searchTerm));
-			specs = specs.or(AirportSpecification.queContenhaNumRegCom(this.searchTerm));
+			specs = specs.or(AirportSpecification.queContenhaAirportNameCom(this.searchTerm));
+			specs = specs.or(AirportSpecification.queContenhaIataCodeCom(this.searchTerm));
 			specs = specs.or(AirportSpecification.queContenhaPhoneCom(this.searchTerm));
 			specs = specs.or(AirportSpecification.queContenhaEmailCom(this.searchTerm));
 		
 		
 		} else {
 			if (hasText(this.companyName))
-				specs = specs.and(AirportSpecification.queContenhaCompanyNameCom(this.companyName));
+				specs = specs.and(AirportSpecification.queContenhaAirportNameCom(this.companyName));
 			
 			if (hasText(this.numReg))
-				specs = specs.and(AirportSpecification.queContenhaNumRegCom(this.numReg));
+				specs = specs.and(AirportSpecification.queContenhaIataCodeCom(this.numReg));
 			
 			if (hasText(this.phone))
 				specs = specs.and(AirportSpecification.queContenhaPhoneCom(this.phone));

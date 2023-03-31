@@ -35,8 +35,8 @@ public class AirportController {
 	@PostMapping
 	public String criar(@RequestBody CriarAirportDTO airportDTO) {
 		CriarAirportCommand command = CriarAirportCommand.builder()
-				.companyName(airportDTO.getCompanyName())
-				.numReg(airportDTO.getNumReg())
+				.airportName(airportDTO.getAirportName())
+				.iataCode(airportDTO.getIataCode())
 				.phone(airportDTO.getPhone())
 				.email(airportDTO.getEmail())		
 				.addressId(airportDTO.getAddressId())
@@ -49,8 +49,8 @@ public class AirportController {
 	public ResponseEntity<Void> alterar(@PathVariable String id, @RequestBody AlterarAirportDTO airportDTO) {
 		AlterarAirportCommand command = AlterarAirportCommand.builder()
 				.id(id)
-				.companyName(airportDTO.getCompanyName())
-				.numReg(airportDTO.getNumReg())
+				.airportName(airportDTO.getAirportName())
+				.iataCode(airportDTO.getIataCode())
 				.phone(airportDTO.getPhone())
 				.email(airportDTO.getEmail())
 				.addressId(airportDTO.getAddressId())

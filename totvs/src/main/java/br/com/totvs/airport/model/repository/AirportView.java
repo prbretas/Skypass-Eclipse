@@ -27,12 +27,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "airport")
 public class AirportView implements Serializable {
 
-	private static final long serialVersionUID = -878394499593503509L;
-	
+	private static final long serialVersionUID = -3575503244309974210L;
 	@Id
 	private String id;
-	private String companyName;
-	private String numReg;
+	private String airportName;
+	private String iataCode;
 	private String phone;
 	private String email;
 	

@@ -13,25 +13,25 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class AirportSpecification {
 	
-	public static Specification<AirportView> queContenhaCompanyNameCom(String companyName) {
+	public static Specification<AirportView> queContenhaAirportNameCom(String airportName) {
 		return new Specification<AirportView>() {
 
-			private static final long serialVersionUID = -2152102211884913166L;
+			private static final long serialVersionUID = -3062376224830843147L;
 
 			public Predicate toPredicate(Root<AirportView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
-				return builder.like(builder.upper(root.get("companyName")), likeTerm(companyName.trim().toUpperCase()));
+				return builder.like(builder.upper(root.get("airportName")), likeTerm(airportName.trim().toUpperCase()));
 			}
 		};
 	}
 	
 		
-	public static Specification<AirportView> queContenhaNumRegCom(String numReg) {
+	public static Specification<AirportView> queContenhaIataCodeCom(String iataCode) {
 		return new Specification<AirportView>() {
 
-			private static final long serialVersionUID = 1110943931371013169L;
+			private static final long serialVersionUID = 6643063366410532139L;
 
 			public Predicate toPredicate(Root<AirportView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
-				return builder.like(builder.upper(root.get("numReg")), likeTerm(numReg.trim().toUpperCase()));
+				return builder.like(builder.upper(root.get("iataCode")), likeTerm(iataCode.trim().toUpperCase()));
 			}
 		};
 	}
@@ -49,7 +49,7 @@ public class AirportSpecification {
 
 	public static Specification<AirportView> queContenhaEmailCom(String email) {
 		return new Specification<AirportView>() {
-			
+
 			private static final long serialVersionUID = -1953330972125926784L;
 
 			public Predicate toPredicate(Root<AirportView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {

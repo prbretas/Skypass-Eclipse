@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class Airport {
 	@Id
 	private String id;
-	private String companyName;
-	private String numReg;
+	private String airportName;
+	private String iataCode;
 	private String phone;
 	private String email;
 	private boolean ativo;
@@ -24,10 +24,10 @@ public class Airport {
 	private String addressId; //fk_address
 
 	@Builder
-	private Airport(String id,String companyName, String numReg, String phone, String email, String addressId) {
+	private Airport(String id,String airportName, String iataCode, String phone, String email, String addressId) {
 		this.id = id;
-		this.companyName = companyName;
-		this.numReg = numReg;
+		this.airportName = airportName;
+		this.iataCode = iataCode;
 		this.phone = phone;
 		this.email = email;
 		this.addressId = addressId;

@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor(staticName = "of")
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class AlterarAirportDTO {
-	private String companyName;
-	private String numReg;
+	private String airportName;
+	private String iataCode;
 	private String phone;
 	private String email;
 	private String addressId;

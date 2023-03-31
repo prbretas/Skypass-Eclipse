@@ -7,8 +7,8 @@ import lombok.Data;
 @Builder
 public class AlterarAirportCommand {
 	private String id;
-	private String companyName;
-	private String numReg;
+	private String airportName;
+	private String iataCode;
 	private String phone;
 	private String email;
 	private String addressId;

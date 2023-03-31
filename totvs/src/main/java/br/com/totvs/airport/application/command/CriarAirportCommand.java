@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class CriarAirportCommand {
-	private String companyName;
-	private String numReg;
+	private String airportName;
+	private String iataCode;
 	private String phone;
 	private String email;
 	private String addressId;
