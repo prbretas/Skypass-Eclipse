@@ -17,7 +17,7 @@ import lombok.AllArgsConstructor;
 public class AirportApplication {
 	private final AirportRepository repository;
 
-	Set<Airport> clients = new HashSet<>();
+	Set<Airport> airports = new HashSet<>();
 
 	public String criar(CriarAirportCommand criarAirportCommand) {
 		Airport airport = Airport.builder().id(UUID.randomUUID().toString())
