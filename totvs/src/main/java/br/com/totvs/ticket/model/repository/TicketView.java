@@ -15,7 +15,6 @@ import org.hibernate.annotations.NotFoundAction;
 
 import br.com.totvs.client.model.repository.ClientView;
 import br.com.totvs.flight.model.repository.FlightView;
-import br.com.totvs.seat.model.enums.Category;
 import br.com.totvs.seat.model.repository.SeatView;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
