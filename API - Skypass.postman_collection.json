@@ -11,10 +11,19 @@
 			"name": "ADDRESS",
 			"item": [
 				{
-					"name": "GETALL - ADDRESS",
+					"name": "CRIAR - ADDRESS",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"street\": \"Av. Washington Luis\",\r\n  \"number\": 623,\r\n  \"addInfo\": \"Vila Congonhas\",\r\n  \"city\": \"São Paulo\",\r\n  \"state\": \"São Paulo\",\r\n  \"stateCode\": \"SP\",\r\n  \"zipCode\": \"04626-911\",\r\n  \"country\": \"Brasil\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8888/api/v1/addresses",
 							"protocol": "http",
@@ -26,51 +35,6 @@
 								"api",
 								"v1",
 								"addresses"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GETBYID - ADDRESS",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/addresses/005cc156-2aa2-4bba-a86c-2f5e6361202c",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"addresses",
-								"005cc156-2aa2-4bba-a86c-2f5e6361202c"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - ADDRESS",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/addresses/1/delete",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"addresses",
-								"1",
-								"delete"
 							]
 						}
 					},
@@ -103,36 +67,6 @@
 								"addresses",
 								"005cc156-2aa2-4bba-a86c-2f5e6361202c",
 								"update"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "CRIAR - ADDRESS",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"street\": \"Av. Washington Luis\",\r\n  \"number\": 623,\r\n  \"addInfo\": \"Vila Congonhas\",\r\n  \"city\": \"São Paulo\",\r\n  \"state\": \"São Paulo\",\r\n  \"stateCode\": \"SP\",\r\n  \"zipCode\": \"04626-911\",\r\n  \"country\": \"Brasil\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8888/api/v1/addresses",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"addresses"
 							]
 						}
 					},
@@ -183,62 +117,14 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "AIRCRAFT",
-			"item": [
-				{
-					"name": "GETALL - AIRCRAFT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/aircrafts",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"aircrafts"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "GETBYID - AIRCRAFT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/aircrafts/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"aircrafts",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - AIRCRAFT",
+					"name": "DELETE - ADDRESS",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/api/v1/aircrafts/1/delete",
+							"raw": "http://localhost:8888/api/v1/addresses/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -247,7 +133,7 @@
 							"path": [
 								"api",
 								"v1",
-								"aircrafts",
+								"addresses",
 								"1",
 								"delete"
 							]
@@ -256,13 +142,135 @@
 					"response": []
 				},
 				{
+					"name": "GETALL - ADDRESS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - ADDRESS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/addresses/005cc156-2aa2-4bba-a86c-2f5e6361202c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"addresses",
+								"005cc156-2aa2-4bba-a86c-2f5e6361202c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - ADDRESS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/addresses?street=Rua 7 de Setembro&city=São Paulo&state=São Paulo&stateCode=SP&zipCode=84701-850&country=Brasil",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "street",
+									"value": "Rua 7 de Setembro"
+								},
+								{
+									"key": "city",
+									"value": "São Paulo"
+								},
+								{
+									"key": "state",
+									"value": "São Paulo"
+								},
+								{
+									"key": "stateCode",
+									"value": "SP"
+								},
+								{
+									"key": "zipCode",
+									"value": "84701-850"
+								},
+								{
+									"key": "country",
+									"value": "Brasil"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - ADDRESS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/addresses?searchTerm=Avenida Paulista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "Avenida Paulista"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AIRCRAFT",
+			"item": [
+				{
 					"name": "CRIAR - AIRCRAFT",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"model\": \"AIRBUS-737\",\r\n  \"numSerie\": \"01234\",\r\n  \"infoSystem\": \"AIRBUS-737\",\r\n  \"latitude\": \"01010101\",\r\n  \"longitude\": \"02020202\",\r\n  \"cargoWeight\": 200\r\n  }",
+							"raw": "{\r\n  \"model\": \"AIRBUS-737\",\r\n  \"numSerie\": \"01234\",\r\n  \"infoSystem\": \"AIRBUS-737\",\r\n  \"latitude\": \"01010101\",\r\n  \"longitude\": \"02020202\",\r\n  \"cargoWeight\": 8200\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -292,7 +300,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"12\",\r\n  \"model\": \"6549546\",\r\n  \"numSerie\": \"6549546\",\r\n  \"infoSystem\": \"6549546\",\r\n  \"latitude\": \"6549546\",\r\n  \"longitude\": \"6549546\",\r\n  \"cargoWeight\": 0\r\n  }",
+							"raw": "{\r\n  \"id\": \"12\",\r\n  \"model\": \"AIRBUS-737\",\r\n  \"numSerie\": \"01234\",\r\n  \"infoSystem\": \"AIRBUS-737\",\r\n  \"latitude\": \"01010101\",\r\n  \"longitude\": \"02020202\",\r\n  \"cargoWeight\": 8200\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -362,62 +370,14 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "AIRLINE",
-			"item": [
-				{
-					"name": "GETALL - AIRLINE",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/airlines",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"airlines"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "GETBYID - AIRLINE",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/airlines/e74d863c-d3cf-4152-b0e2-a83d098a9d44",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"airlines",
-								"e74d863c-d3cf-4152-b0e2-a83d098a9d44"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - AIRLINE",
+					"name": "DELETE - AIRCRAFT",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/api/v1/airlines/1/delete",
+							"raw": "http://localhost:8888/api/v1/aircrafts/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -426,7 +386,7 @@
 							"path": [
 								"api",
 								"v1",
-								"airlines",
+								"aircrafts",
 								"1",
 								"delete"
 							]
@@ -435,13 +395,123 @@
 					"response": []
 				},
 				{
+					"name": "GETALL - AIRCRAFT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/aircrafts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"aircrafts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - AIRCRAFT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/aircrafts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"aircrafts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - AIRCRAFT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/aircrafts?model=AIRBUS 737&numSerie=998945616996126358&infoSystem=AB737 RollsRoyce 49863",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"aircrafts"
+							],
+							"query": [
+								{
+									"key": "model",
+									"value": "AIRBUS 737"
+								},
+								{
+									"key": "numSerie",
+									"value": "998945616996126358"
+								},
+								{
+									"key": "infoSystem",
+									"value": "AB737 RollsRoyce 49863"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - AIRCRAFT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/aircrafts?searchTerm=BOEING 980",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"aircrafts"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "BOEING 980"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AIRLINE",
+			"item": [
+				{
 					"name": "CRIAR - AIRLINE",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"companyName\": \"American Airli545nes\",\r\n  \"numReg\": \"14567854590321\",\r\n  \"phone\": \"2123456789\",\r\n  \"email\": \"info@aa.com\",\r\n\r\n  \"addressId\": \"005cc156-2aa2-4bba-a86c-2f5e6361202c\"\r\n        \r\n}\r\n",
+							"raw": "{\r\n  \"companyName\": \"American Airlines\",\r\n  \"numReg\": \"14567854590321\",\r\n  \"phone\": \"2123456789\",\r\n  \"email\": \"info@aa.com\",\r\n  \"addressId\": \"1aed0847-674d-4940-9e10-abf2f4a6d2bb\"       \r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -471,7 +541,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"companyName\": \"American Airlines\",\r\n  \"numReg\": \"14567890321\",\r\n  \"phone\": \"2123456789\",\r\n  \"email\": \"info@aa.com\",\r\n  \"addressId\": \"1c996a0f-8f8e-4132-a891-75dd85c2d82d\"\r\n}\r\n",
+							"raw": "{\r\n  \"companyName\": \"American Airlines\",\r\n  \"numReg\": \"14567854590321\",\r\n  \"phone\": \"2123456789\",\r\n  \"email\": \"info@aa.com\",\r\n  \"addressId\": \"1aed0847-674d-4940-9e10-abf2f4a6d2bb\"       \r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -541,62 +611,14 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "AIRPORT",
-			"item": [
-				{
-					"name": "GETALL - CLIENT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/airports",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"airports"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "GETBYID - CLIENT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/airports/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"airports",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - CLIENT",
+					"name": "DELETE - AIRLINE",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/api/v1/airports/12/delete",
+							"raw": "http://localhost:8888/api/v1/airlines/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -605,8 +627,8 @@
 							"path": [
 								"api",
 								"v1",
-								"airports",
-								"12",
+								"airlines",
+								"1",
 								"delete"
 							]
 						}
@@ -614,13 +636,127 @@
 					"response": []
 				},
 				{
-					"name": "CRIAR - CLIENT",
+					"name": "GETALL - AIRLINE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airlines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airlines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - AIRLINE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airlines/e74d863c-d3cf-4152-b0e2-a83d098a9d44",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airlines",
+								"e74d863c-d3cf-4152-b0e2-a83d098a9d44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - AIRLINE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airlines?companyName=LATAM Airlines&numReg=9845163254&phone=21945655987&email=latam.aa@latam.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airlines"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "LATAM Airlines"
+								},
+								{
+									"key": "numReg",
+									"value": "9845163254"
+								},
+								{
+									"key": "phone",
+									"value": "21945655987"
+								},
+								{
+									"key": "email",
+									"value": "latam.aa@latam.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - AIRLINE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airlines?searchTerm=FLY US",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airlines"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "FLY US"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AIRPORT",
+			"item": [
+				{
+					"name": "CRIAR - AIRPORT",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"name\": \"SANTOS DUMMONT\",\r\n  \"iataCode\": \"SDU\",\r\n  \"phone\": \"+55213004-6050\",\r\n  \"email\": \"santosdummont.aeroporto@gmail.com\",\r\n  \"addressId\": \"\"\r\n}\r\n",
+							"raw": "{\r\n  \"airportName\": \"SANTOS DUMMONT\",\r\n  \"iataCode\": \"SDU\",\r\n  \"phone\": \"+55213004-6050\",\r\n  \"email\": \"santosdummont.aeroporto@gmail.com\",\r\n  \"addressId\": \"1aed0847-674d-4940-9e10-abf2f4a6d2bb\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -644,13 +780,13 @@
 					"response": []
 				},
 				{
-					"name": "ALTERAR - CLIENT",
+					"name": "ALTERAR - AIRPORT",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"12\",\r\n  \"idAdress\": 674649,\r\n  \"name\": \"2hdfhdf\",\r\n  \"iataCode\": \"hdfhdfh\",\r\n  \"phone\": \"+55213004-6050\",\r\n  \"email\": \"galeao.aeroporto@gmail.com\"\r\n}\r\n",
+							"raw": "{\r\n  \"id\": \"12\",\r\n  \"airportName\": \"SANTOS DUMMONT\",\r\n  \"iataCode\": \"SDU\",\r\n  \"phone\": \"+55213004-6050\",\r\n  \"email\": \"santosdummont.aeroporto@gmail.com\",\r\n  \"addressId\": \"1aed0847-674d-4940-9e10-abf2f4a6d2bb\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -676,7 +812,7 @@
 					"response": []
 				},
 				{
-					"name": "ATIVAR - CLIENT",
+					"name": "ATIVAR - AIRPORT",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -699,7 +835,7 @@
 					"response": []
 				},
 				{
-					"name": "INATIVAR - CLIENT",
+					"name": "INATIVAR - AIRPORT",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -720,154 +856,24 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "CLIENT",
-			"item": [
-				{
-					"name": "GETALL - CLIENT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/clients",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"clients"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "GETALL - COM FILTROS - CLIENT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/clients?userName=user1123&name=Rodrigo&lastName=Gomes&numReg=9848465-9&phone=+55(47)12345-6789&email=rodgomes42@gmail.com&birthdate=1986-05-26&addressId=Rua",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"clients"
-							],
-							"query": [
-								{
-									"key": "userName",
-									"value": "user1123"
-								},
-								{
-									"key": "name",
-									"value": "Rodrigo"
-								},
-								{
-									"key": "lastName",
-									"value": "Gomes"
-								},
-								{
-									"key": "numReg",
-									"value": "9848465-9"
-								},
-								{
-									"key": "phone",
-									"value": "+55(47)12345-6789"
-								},
-								{
-									"key": "email",
-									"value": "rodgomes42@gmail.com"
-								},
-								{
-									"key": "birthdate",
-									"value": "1986-05-26"
-								},
-								{
-									"key": "addressId",
-									"value": "Rua"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GETALL - COM FILTROS SearchTerm - CLIENT Copy",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/clientes?searchTerm=dri",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"clientes"
-							],
-							"query": [
-								{
-									"key": "searchTerm",
-									"value": "dri"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GETBYID - CLIENT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/clients/9ab94c06-fe7e-4cef-888e-5580c866e106",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"clients",
-								"9ab94c06-fe7e-4cef-888e-5580c866e106"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - CLIENT",
+					"name": "DELETE - AIRPORT",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/clients/1/delete",
+							"raw": "http://localhost:8888/api/v1/airports/12/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
-								"clients",
-								"1",
+								"airports",
+								"12",
 								"delete"
 							]
 						}
@@ -875,13 +881,127 @@
 					"response": []
 				},
 				{
+					"name": "GETALL - AIRPORT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - AIRPORT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airports/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airports",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - AIRPORT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airports?airportName=GUARULHOS&iataCode=GUG&phone=1198523987&email=guarulhos.airport@gug.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "airportName",
+									"value": "GUARULHOS"
+								},
+								{
+									"key": "iataCode",
+									"value": "GUG"
+								},
+								{
+									"key": "phone",
+									"value": "1198523987"
+								},
+								{
+									"key": "email",
+									"value": "guarulhos.airport@gug.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - AIRPORT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/airports?searchTerm=SANTOS DUMMONT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "SANTOS DUMMONT"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENT",
+			"item": [
+				{
 					"name": "CRIAR - CLIENT",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"userName\": \"carlos14446\",\r\n  \"name\": \"Carlos\",\r\n  \"lastName\": \"da Silva\",\r\n  \"numReg\": \"146544447-7 SSP-SC\",\r\n  \"phone\": \"+5522978652616\",\r\n  \"email\": \"carlos41144@gmail.com\",\r\n  \"password\": \"65959\",\r\n  \"birthdate\": \"1978-10-15\",\r\n  \"addressId\": \"1c996a0f-8f8e-4132-a891-75dd85c2d82d\"\r\n\r\n}",
+							"raw": "{\r\n  \"userName\": \"carlos14446\",\r\n  \"name\": \"Carlos\",\r\n  \"lastName\": \"da Silva\",\r\n  \"numReg\": \"146544447-7 SSP-SC\",\r\n  \"phone\": \"+5522978652616\",\r\n  \"email\": \"carlos41144@gmail.com\",\r\n  \"password\": \"65959\",\r\n  \"birthdate\": \"1978-10-15\",\r\n  \"addressId\": \"1aed0847-674d-4940-9e10-abf2f4a6d2bb\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -911,7 +1031,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"12\",\r\n  \"userName\": \"carlos87489756\",\r\n  \"name\": \"Carlos\",\r\n  \"lastName\": \" Gomes da Silva\",\r\n  \"numReg\": \"142546854-7 SSP-SC\",\r\n  \"phone\": \"+5522978652616\",\r\n  \"email\": \"carlos123@gmail.com\",\r\n  \"adress\": \"Rua 123, centro Joinvile-SC\",\r\n  \"birthday\": \"1978-10-15\",\r\n  \"ativo\": true\r\n}",
+							"raw": "{\r\n  \"id\": \"12\",\r\n  \"userName\": \"carlos14446\",\r\n  \"name\": \"Carlos\",\r\n  \"lastName\": \"da Silva\",\r\n  \"numReg\": \"146544447-7 SSP-SC\",\r\n  \"phone\": \"+5522978652616\",\r\n  \"email\": \"carlos41144@gmail.com\",\r\n  \"password\": \"65959\",\r\n  \"birthdate\": \"1978-10-15\",\r\n  \"addressId\": \"1aed0847-674d-4940-9e10-abf2f4a6d2bb\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -981,71 +1101,23 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "FLIGHT",
-			"item": [
-				{
-					"name": "GETALL - FLIGHT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/flights",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"flights"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "GETBYID - FLIGHT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/flights/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"flights",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - FLIGHT",
+					"name": "DELETE - CLIENT",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/api/v1/flights/1/delete",
+							"raw": "http://localhost:8080/api/v1/clients/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8888",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"flights",
+								"clients",
 								"1",
 								"delete"
 							]
@@ -1054,13 +1126,139 @@
 					"response": []
 				},
 				{
+					"name": "GETALL - CLIENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - CLIENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/clients/9ab94c06-fe7e-4cef-888e-5580c866e106",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"9ab94c06-fe7e-4cef-888e-5580c866e106"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - CLIENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/clients?userName=user1123&name=Rodrigo&lastName=Gomes&numReg=9848465-9&phone=+55(47)12345-6789&email=rodgomes42@gmail.com&birthdate=1986-05-26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "user1123"
+								},
+								{
+									"key": "name",
+									"value": "Rodrigo"
+								},
+								{
+									"key": "lastName",
+									"value": "Gomes"
+								},
+								{
+									"key": "numReg",
+									"value": "9848465-9"
+								},
+								{
+									"key": "phone",
+									"value": "+55(47)12345-6789"
+								},
+								{
+									"key": "email",
+									"value": "rodgomes42@gmail.com"
+								},
+								{
+									"key": "birthdate",
+									"value": "1986-05-26"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - CLIENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/clients?searchTerm=dri",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "dri"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FLIGHT",
+			"item": [
+				{
 					"name": "CRIAR - FLIGHT",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"departurePlace\": \"\", \r\n\"arrivalPlace\": \"\",\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10\r\n}",
+							"raw": "{\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10,\r\n\"aircraftId\": \"0acc6d11-e6f6-4231-98e5-786916a28225\",\r\n\"departureAirportId\": \"cf14cdb3-b9c3-404c-a7bf-7d47ec9a03ed\", \r\n\"arrivalAirportId\": \"cf14cdb3-b9c3-404c-a7bf-7d47ec9a03ed\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1090,7 +1288,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"id\": \"12\",\r\n\"departurePlace\": \"\", \r\n\"arrivalPlace\": \"\",\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10\r\n  \r\n}",
+							"raw": "{\r\n\"id\": \"12\",\r\n\"departureTime\": \"7:15\",\r\n\"arrivalTime\": \"14:50\",\r\n\"date\": \"17/03/2023\",\r\n\"numPassengers\": 10,\r\n\"aircraftId\": \"0acc6d11-e6f6-4231-98e5-786916a28225\",\r\n\"departureAirportId\": \"cf14cdb3-b9c3-404c-a7bf-7d47ec9a03ed\", \r\n\"arrivalAirportId\": \"cf14cdb3-b9c3-404c-a7bf-7d47ec9a03ed\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1160,62 +1358,14 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "SEAT",
-			"item": [
-				{
-					"name": "GETALL - SEAT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/seats",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"seats"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "GETBYID - SEAT",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/seats/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"seats",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - SEAT",
+					"name": "DELETE - FLIGHT",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/api/v1/seats/1/delete",
+							"raw": "http://localhost:8888/api/v1/flights/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1224,7 +1374,7 @@
 							"path": [
 								"api",
 								"v1",
-								"seats",
+								"flights",
 								"1",
 								"delete"
 							]
@@ -1233,13 +1383,138 @@
 					"response": []
 				},
 				{
+					"name": "GETALL - FLIGHT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/flights",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - FLIGHT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/flights/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"flights",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - FLIGHT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/flights?searchTerm=17/03/2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "17/03/2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - FLIGHT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/flights?departureTime=14:30&arrivalTime=18:52&date=20/05/2022&aircraftId=gsdghj3589235vsdv3gvsdf&departureAirportId=SANTOS DUMMONT&arrivalAirportId=CONGONHAS",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "departureTime",
+									"value": "14:30"
+								},
+								{
+									"key": "arrivalTime",
+									"value": "18:52"
+								},
+								{
+									"key": "date",
+									"value": "20/05/2022"
+								},
+								{
+									"key": "aircraftId",
+									"value": "gsdghj3589235vsdv3gvsdf",
+									"description": "na verdade deve ser um ID tipo String"
+								},
+								{
+									"key": "departureAirportId",
+									"value": "SANTOS DUMMONT",
+									"description": "na verdade deve ser um ID tipo String"
+								},
+								{
+									"key": "arrivalAirportId",
+									"value": "CONGONHAS",
+									"description": "na verdade deve ser um ID tipo String"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SEAT",
+			"item": [
+				{
 					"name": "CRIAR - SEAT",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"seatName\": \"010-A\",\r\n  \"category\": 2\r\n\r\n}\r\n",
+							"raw": "{\r\n  \"seatName\": \"010-A\",\r\n  \"category\": 2\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1269,7 +1544,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"seatName\": \"401-A\",\r\n  \"category\": 2,\r\n  \"idAircraft\": {\r\n      \"idAircraft\": 1, \r\n      \"numSerie\": \"0102\"}\r\n}\r\n",
+							"raw": "{\r\n  \"seatName\": \"401-A\",\r\n  \"category\": 2\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1339,62 +1614,14 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "TICKET",
-			"item": [
-				{
-					"name": "GETALL - TICKET",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/tickets",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"tickets"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "GETBYID - TICKET",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8888/api/v1/tickets/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8888",
-							"path": [
-								"api",
-								"v1",
-								"tickets",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE - TICKET",
+					"name": "DELETE - SEAT",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/api/v1/tickets/1/delete",
+							"raw": "http://localhost:8888/api/v1/seats/1/delete",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1403,7 +1630,7 @@
 							"path": [
 								"api",
 								"v1",
-								"tickets",
+								"seats",
 								"1",
 								"delete"
 							]
@@ -1412,13 +1639,120 @@
 					"response": []
 				},
 				{
+					"name": "GETALL - SEAT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/seats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"seats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - SEAT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/seats/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"seats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - SEAT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/seats?seatName=025-A&category=FIRST_CLASS",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"seats"
+							],
+							"query": [
+								{
+									"key": "seatName",
+									"value": "025-A"
+								},
+								{
+									"key": "category",
+									"value": "FIRST_CLASS",
+									"description": "num ou ENUM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - SEAT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/seats?searchTerm=158-D",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"seats"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "158-D"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TICKET",
+			"item": [
+				{
 					"name": "CRIAR - TICKET",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"category\": 0,\r\n\"luggageAmount\": 2,\r\n\"luggageWeight\": 22,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99,\r\n\r\n\"idClient\": 44456,\r\n\"idFlight\": 12345,\r\n\"idSeat\": \"079-B\"\r\n}",
+							"raw": "{\r\n\"amountLuggage\": 2,\r\n\"weightLuggage\": 22.5,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99,\r\n\r\n\"clientId\": \"c301e518-388e-4687-9f4b-930364cc06c3\",\r\n\"flightId\": \"ca3fe09e-3dcb-4bc9-800b-872443450350\",\r\n\"seatId\": \"25280c78-6bc2-4a2b-a684-db63f659db22\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1448,7 +1782,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"12\",\r\n\"category\": 0,\r\n\"luggageAmount\": 2,\r\n\"luggageWeight\": 22,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99,\r\n\r\n\"idClient\": 44456,\r\n\"idFlight\": 12345,\r\n\"idSeat\": \"079-B\"\r\n}",
+							"raw": "{\r\n  \"id\": \"12\",\r\n\"amountLuggage\": 2,\r\n\"weightLuggage\": 22.5,\r\n\"date\": \"07/07/2023\",\r\n\"ticketPrice\": 99.99,\r\n\r\n\"clientId\": \"c301e518-388e-4687-9f4b-930364cc06c3\",\r\n\"flightId\": \"ca3fe09e-3dcb-4bc9-800b-872443450350\",\r\n\"seatId\": \"25280c78-6bc2-4a2b-a684-db63f659db22\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1514,6 +1848,138 @@
 								"tickets",
 								"1",
 								"inativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - TICKET",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/tickets/1/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"tickets",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - TICKET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID - TICKET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/tickets/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"tickets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS - TICKET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/tickets?amountLuggage=2&weightLuggage=20.890&date=14/02/2019&ticketPrice=587.98",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "amountLuggage",
+									"value": "2"
+								},
+								{
+									"key": "weightLuggage",
+									"value": "20.890"
+								},
+								{
+									"key": "date",
+									"value": "14/02/2019"
+								},
+								{
+									"key": "ticketPrice",
+									"value": "587.98"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL - COM FILTROS SearchTerm - TICKET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/api/v1/tickets?searchTerm=698.97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "698.97"
+								}
 							]
 						}
 					},
