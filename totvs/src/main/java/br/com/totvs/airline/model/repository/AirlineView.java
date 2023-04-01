@@ -40,6 +40,4 @@ public class AirlineView implements Serializable {
 	@NotFound(action = NotFoundAction.IGNORE)
 	@JoinColumn(name = "addressId", referencedColumnName = "id", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT), insertable = false, updatable = false)
 	AddressView address;
-	
-	//INCLUIR A LISTA DE AIRCRAFTS!
 }

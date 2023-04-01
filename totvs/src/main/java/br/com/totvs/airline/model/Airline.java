@@ -21,9 +21,7 @@ public class Airline {
 	private String email;
 	private boolean ativo;
 	
-	private String addressId; //fk_address
-	
-	//INCLUIR A LISTA DE AIRCRAFTS
+	private String addressId;
 
 	@Builder
 	private Airline(String id,String companyName, String numReg, String phone, String email, String addressId) {
