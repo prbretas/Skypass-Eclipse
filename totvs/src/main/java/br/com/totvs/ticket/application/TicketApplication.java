@@ -21,7 +21,6 @@ public class TicketApplication {
 
 	public String criar(CriarTicketCommand criarTicketCommand) {
 		Ticket ticket = Ticket.builder().id(UUID.randomUUID().toString())
-				.category(criarTicketCommand.getCategory())
 				.amountLuggage(criarTicketCommand.getAmountLuggage())
 				.weightLuggage(criarTicketCommand.getWeightLuggage())
 				.date(criarTicketCommand.getDate())
@@ -38,7 +37,6 @@ public class TicketApplication {
 
 	public void alterar(AlterarTicketCommand alterarTicketCommand) {
 		this.repository.findById(alterarTicketCommand.getId()).ifPresent(ticket -> {
-			ticket.setCategory(alterarTicketCommand.getCategory());
 			ticket.setAmountLuggage(alterarTicketCommand.getAmountLuggage());
 			ticket.setWeightLuggage(alterarTicketCommand.getWeightLuggage());
 			ticket.setDate(alterarTicketCommand.getDate());

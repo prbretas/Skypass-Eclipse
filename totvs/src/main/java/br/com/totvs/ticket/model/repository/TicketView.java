@@ -33,7 +33,6 @@ public class TicketView implements Serializable {
 	private static final long serialVersionUID = 6160670597179814786L;
 	@Id
 	private String id;
-	private Category category;
 	private int amountLuggage;
 	private double weightLuggage;
 	private String date;

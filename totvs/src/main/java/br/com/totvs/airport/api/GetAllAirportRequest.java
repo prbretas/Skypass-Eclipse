@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Data
 public class GetAllAirportRequest {
-	private String companyName;
+	private String airportName;
 	private String numReg;
 	private String phone;
 	private String email;
@@ -27,8 +27,8 @@ public class GetAllAirportRequest {
 		
 		
 		} else {
-			if (hasText(this.companyName))
-				specs = specs.and(AirportSpecification.queContenhaAirportNameCom(this.companyName));
+			if (hasText(this.airportName))
+				specs = specs.and(AirportSpecification.queContenhaAirportNameCom(this.airportName));
 			
 			if (hasText(this.numReg))
 				specs = specs.and(AirportSpecification.queContenhaIataCodeCom(this.numReg));

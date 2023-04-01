@@ -35,7 +35,6 @@ public class TicketController {
 	@PostMapping
 	public String criar(@RequestBody CriarTicketDTO ticketDTO) {
 		CriarTicketCommand command = CriarTicketCommand.builder()
-				.category(ticketDTO.getCategory())
 				.amountLuggage(ticketDTO.getAmountLuggage())
 				.weightLuggage(ticketDTO.getWeightLuggage())
 				.date(ticketDTO.getDate())
@@ -52,7 +51,6 @@ public class TicketController {
 	public ResponseEntity<Void> alterar(@PathVariable String id, @RequestBody AlterarTicketDTO ticketDTO) {
 		AlterarTicketCommand command = AlterarTicketCommand.builder()
 				.id(id)
-				.category(ticketDTO.getCategory())
 				.amountLuggage(ticketDTO.getAmountLuggage())
 				.weightLuggage(ticketDTO.getWeightLuggage())
 				.date(ticketDTO.getDate())

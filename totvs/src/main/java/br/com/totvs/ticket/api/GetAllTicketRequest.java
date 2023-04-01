@@ -10,7 +10,6 @@ import lombok.Data;
 
 @Data
 public class GetAllTicketRequest {
-	private String category;
 	private String amountLuggage;
 	private String weightLuggage;
 	private String date;
@@ -21,7 +20,6 @@ public class GetAllTicketRequest {
 		Specification<TicketView> specs = Specification.where(null);
 
 		if (hasText(this.searchTerm)) {
-			specs = specs.or(TicketSpecification.queContenhaCategoryCom(this.searchTerm));
 			specs = specs.or(TicketSpecification.queContenhaAmountLuggageCom(this.searchTerm));
 			specs = specs.or(TicketSpecification.queContenhaWeightLuggageCom(this.searchTerm));
 			specs = specs.or(TicketSpecification.queContenhaDateCom(this.searchTerm));
@@ -29,9 +27,6 @@ public class GetAllTicketRequest {
 		
 		
 		} else {
-			if (hasText(this.category))
-				specs = specs.and(TicketSpecification.queContenhaCategoryCom(this.category));
-			
 			if (hasText(this.amountLuggage))
 				specs = specs.and(TicketSpecification.queContenhaAmountLuggageCom(this.amountLuggage));
 			

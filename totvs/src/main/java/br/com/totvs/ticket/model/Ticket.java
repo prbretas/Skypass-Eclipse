@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import br.com.totvs.seat.model.enums.Category;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +15,6 @@ import lombok.NoArgsConstructor;
 public class Ticket {
 	@Id
 	private String id;
-	private Category category;
 	private int amountLuggage;
 	private double weightLuggage;
 	private String date;
@@ -28,11 +26,10 @@ public class Ticket {
 	private String seatId;  // (FK_SEAT_TICKET)
 
 	@Builder
-	private Ticket(String id, Category category, int amountLuggage,
+	private Ticket(String id, int amountLuggage,
 			double weightLuggage, String date, double ticketPrice, String clientId,
 			String flightId, String seatId) {
 		this.id = id;
-		this.category = category;
 		this.amountLuggage = amountLuggage;
 		this.weightLuggage = weightLuggage;
 		this.date = date;

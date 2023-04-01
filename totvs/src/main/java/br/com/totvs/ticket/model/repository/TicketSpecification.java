@@ -13,16 +13,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class TicketSpecification {
 	
-	public static Specification<TicketView> queContenhaCategoryCom(String category) {
-		return new Specification<TicketView>() {
-			private static final long serialVersionUID = -8822706372313942406L;
-
-			public Predicate toPredicate(Root<TicketView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
-				return builder.equal(root.get("category"), category);
-			}
-		};
-	}
-	
 	public static Specification<TicketView> queContenhaAmountLuggageCom(String amountLuggage) {
 		return new Specification<TicketView>() {
 			private static final long serialVersionUID = 5208243239467290446L;

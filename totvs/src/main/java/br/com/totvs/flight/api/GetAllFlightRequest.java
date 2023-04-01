@@ -13,7 +13,6 @@ public class GetAllFlightRequest {
 	private String departureTime;
 	private String arrivalTime;
 	private String date;
-	private String numPassengers; 
 	private String aircraftId; // NAO SEI SE É NECESSARIO
 	private String departureAirportId; // NAO SEI SE É NECESSARIO
 	private String arrivalAirportId; // NAO SEI SE É NECESSARIO

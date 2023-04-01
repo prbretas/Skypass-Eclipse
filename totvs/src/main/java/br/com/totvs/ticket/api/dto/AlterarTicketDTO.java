@@ -1,6 +1,5 @@
 package br.com.totvs.ticket.api.dto;
 
-import br.com.totvs.seat.model.enums.Category;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor(staticName = "of")
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class AlterarTicketDTO {
-	private Category category;
 	private int amountLuggage;
 	private double weightLuggage;
 	private String date;
