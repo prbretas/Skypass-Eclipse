@@ -49,7 +49,7 @@ public class ClientController {
 		return clientApp.criar(command);
 	}
 
-	@PostMapping(path = "/{id}/alterar")
+	@PostMapping(path = "/{id}/update")
 	public ResponseEntity<Void> alterar(@PathVariable String id, @RequestBody AlterarClientDTO clientDTO) {
 		AlterarClientCommand command = AlterarClientCommand.builder()
 				.id(id).userName(clientDTO.getUserName())

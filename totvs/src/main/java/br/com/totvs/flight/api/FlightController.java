@@ -47,7 +47,7 @@ public class FlightController {
 		return flightApp.criar(command);
 	}
 
-	@PostMapping(path = "/{id}/alterar")
+	@PostMapping(path = "/{id}/update")
 	public ResponseEntity<Void> alterar(@PathVariable String id, @RequestBody AlterarFlightDTO flightDTO) {
 		AlterarFlightCommand command = AlterarFlightCommand.builder()
 				.id(id)
