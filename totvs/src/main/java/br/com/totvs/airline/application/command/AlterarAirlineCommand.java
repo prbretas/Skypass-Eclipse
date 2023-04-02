@@ -1,5 +1,7 @@
 package br.com.totvs.airline.application.command;
 
+import java.util.Set;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,5 +14,5 @@ public class AlterarAirlineCommand {
 	private String phone;
 	private String email;
 	private String addressId;
-	//INCLUIR LISTA DE AIRCRAFTS
+	private Set<String> aircrafts;
 }
