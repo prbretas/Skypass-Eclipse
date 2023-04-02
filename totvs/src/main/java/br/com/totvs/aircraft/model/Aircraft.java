@@ -1,8 +1,10 @@
 package br.com.totvs.aircraft.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +18,9 @@ public class Aircraft {
 	@Id
 	private String id;
 	private String model;
+	
+	@NotBlank
+	@Column(nullable = false, unique = true)
 	private String numSerie;
 	private String infoSystem;
 	private String latitude;

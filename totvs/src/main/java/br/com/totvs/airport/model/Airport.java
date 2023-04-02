@@ -1,8 +1,11 @@
 package br.com.totvs.airport.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import lombok.Builder;
 import lombok.Data;
@@ -15,9 +18,14 @@ import lombok.NoArgsConstructor;
 public class Airport {
 	@Id
 	private String id;
+	@NotBlank
+    @Column(nullable = false, unique = true)
 	private String airportName;
+	@NotBlank
+    @Column(nullable = false, unique = true)
 	private String iataCode;
 	private String phone;
+	@Email
 	private String email;
 	private boolean ativo;
 	

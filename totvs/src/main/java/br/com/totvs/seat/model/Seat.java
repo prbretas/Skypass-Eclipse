@@ -5,6 +5,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import br.com.totvs.seat.model.enums.Category;
 import lombok.Builder;
@@ -18,6 +19,7 @@ import lombok.NoArgsConstructor;
 public class Seat {
 	@Id
 	private String id;
+	@NotBlank
 	private String seatName;
 	@Enumerated(EnumType.STRING)
 	private Category category;

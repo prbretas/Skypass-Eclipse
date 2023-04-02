@@ -1,8 +1,11 @@
 package br.com.totvs.client.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import lombok.Builder;
 import lombok.Data;
@@ -15,11 +18,16 @@ import lombok.NoArgsConstructor;
 public class Client {
 	@Id
 	private String id;
+	@NotBlank
+    @Column(nullable = false, unique = true)
 	private String userName;
 	private String name;
 	private String lastName;
+	@NotBlank
+    @Column(nullable = false, unique = true)
 	private String numReg;
 	private String phone;
+	@Email
 	private String email;
 	private String password;
 	private String birthdate;
