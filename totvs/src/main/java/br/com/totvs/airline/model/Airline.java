@@ -2,6 +2,7 @@ package br.com.totvs.airline.model;
 
 import static javax.persistence.FetchType.EAGER;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -62,6 +63,9 @@ public class Airline {
 	}
 
 	public void setAircrafts(Set<AirlineAircraft> aircrafts) {
+		if (this.aircrafts == null)
+			this.aircrafts = new HashSet<AirlineAircraft>();
+		
 		this.aircrafts.clear();
 		this.aircrafts.addAll(aircrafts);
 	}

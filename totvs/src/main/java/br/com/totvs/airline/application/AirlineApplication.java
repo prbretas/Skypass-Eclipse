@@ -30,7 +30,7 @@ public class AirlineApplication {
 		Set<AirlineAircraft> listaAircraft = new HashSet<>();
 
 		criarAirlineCommand.getAircrafts().stream().forEach(aircraft -> {
-			listaAircraft.add(AirlineAircraft.of(airlineId, aircraft));
+			listaAircraft.add(AirlineAircraft.of(aircraft, airlineId));
 		});
 
 		airline.setAircrafts(listaAircraft);
@@ -49,8 +49,8 @@ public class AirlineApplication {
 
 			Set<AirlineAircraft> listaAircraft = new HashSet<>();
 
-			airline.getAircrafts().stream().forEach(aircraft -> {
-				listaAircraft.add(AirlineAircraft.of(airline.getId(), aircraft.getId()));
+			alterarAirlineCommand.getAircrafts().stream().forEach(aircraft -> {
+				listaAircraft.add(AirlineAircraft.of(aircraft, airline.getId()));
 			});
 
 			airline.setAircrafts(listaAircraft);
