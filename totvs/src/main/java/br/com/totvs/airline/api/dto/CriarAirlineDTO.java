@@ -1,5 +1,6 @@
 package br.com.totvs.airline.api.dto;
 
+import java.util.Set;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -17,5 +18,5 @@ public class CriarAirlineDTO {
 	private String phone;
 	private String email;
 	private String addressId;
-	//INCLUIR LISTA DE AIRCRAFTS
+	private Set<String> listaAircraft;
 }
