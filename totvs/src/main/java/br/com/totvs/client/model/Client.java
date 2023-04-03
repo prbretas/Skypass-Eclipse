@@ -27,7 +27,6 @@ public class Client {
     @Column(nullable = false, unique = true)
 	private String numReg;
 	private String phone;
-	@Email
 	private String email;
 	private String password;
 	private String birthdate;
