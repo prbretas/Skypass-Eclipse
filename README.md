@@ -15,7 +15,7 @@ Conceito:
 Uma API para gerenciar um sistema de passagens aéreas, onde o objetivo é a venda das passagens. O cenário ideal seria onde um cliente busca uma passagem aérea para viajar, realiza um breve cadastro e já pode comprar a passagem.
 <br>
 
-| JAVA | MSSQLSERVER | SPRING BOOT | API |
+| JAVA | INTELLIJ IDE| ECLIPSE IDE| SPRING BOOT | MAVEN | LOMBOK | API | SQL | DOCKER | DBEAVER | MSSQLSERVER |
 
 <hr>
 
