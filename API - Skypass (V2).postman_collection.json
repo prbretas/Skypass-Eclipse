@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "99d4c5a9-bf6a-4b87-a3da-e8d0cc255260",
+		"_postman_id": "17e24c9e-592b-485e-8879-ec95b5959fd1",
 		"name": "API - Skypass (V2)",
 		"description": "##### SKYPASS Flights® - Aplicação utilizando como modelo um sistema de passagens aéreas\n\nDescrição:  \nProjeto de conclusão do Módulo Programação WEB II do programa START Universidade TOTVS & Ada Tech.\n\nConceito: Uma API para gerenciar um sistema de passagens Aéreas.\n\nStartFragment\n\n#### Participantes:\n\n- [Dener Rodrigo Corrêa](https://www.linkedin.com/in/drc43/)\n- [Lucas Eduardo Ferreira](https://www.linkedin.com/in/lucas-eduardo-ferreira-pcd-688538239/)\n- [Philippe Rocca Bretas](https://www.linkedin.com/in/phrbretas/)[  \n    ](https://www.linkedin.com/in/phrbretas/)\n    \n\nLink GITHUB:\n\n[https://github.com/prbretas/Skypass](https://github.com/prbretas/Skypass)\n\nDOCUMENTAÇÃO:\n\n[https://docs.google.com/document/d/1ElRBBApK8j2OIPLHJ2G7ijFpY8Qq2nvwOsQtGmz6KdQ/edit?usp=sharing](https://docs.google.com/document/d/1ElRBBApK8j2OIPLHJ2G7ijFpY8Qq2nvwOsQtGmz6KdQ/edit?usp=sharing)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24839450"
+		"_exporter_id": "25317911"
 	},
 	"item": [
 		{
@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"street\": \"1 Airport Rd\",\r\n\"number\": 995,\r\n\"addInfo\": \"\",\r\n\"city\": \"Denver\",\r\n\"state\": \"Colorado\",\r\n\"stateCode\": \"CO\",\r\n\"zipCode\": \"80249\",\r\n\"country\": \"United States\"\r\n}\r\n",
+							"raw": "{\r\n\"street\": \"6437 Airport Rd\",\r\n\"number\": 35,\r\n\"addInfo\": \"\",\r\n\"city\": \"Rio de Janeiro \",\r\n\"state\": \"Rio de Jan   eiro\",\r\n\"stateCode\": \"CO\",\r\n\"zipCode\": \"80249\",\r\n\"country\": \"United States\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -274,7 +274,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"model\": \"AIRBUS-737\",\r\n  \"numSerie\": \"012634\",\r\n  \"infoSystem\": \"AIRBUS-737\",\r\n  \"latitude\": \"01010101\",\r\n  \"longitude\": \"02020202\",\r\n  \"cargoWeight\": 8200\r\n  }",
+							"raw": "{\r\n  \"model\": \"AIRBUS-737\",\r\n  \"numSerie\": \"235\",\r\n  \"infoSystem\": \"AIRBUS-737\",\r\n  \"latitude\": \"01010101\",\r\n  \"longitude\": \"02020202\",\r\n  \"cargoWeight\": 8500\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -515,7 +515,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"companyName\": \"UNITED AIRLINES\",\r\n  \"numReg\": \"09876543210\",\r\n  \"phone\": \"18002415222\",\r\n  \"email\": \"united@united.com\",\r\n \"adressId\": \"\",\r\n  \"listaAircraft\": [\r\n      \"c2b9448b-296a-4d07-84a0-ebbd2d045d08\"\r\n      ]\r\n}\r\n",
+							"raw": "{\r\n  \"companyName\": \"gasgasgS\",\r\n  \"numReg\": \"7472774\",\r\n  \"phone\": \"+654-664-1345\",\r\n  \"email\": \"flyus.airlines@flyusa.com\",\r\n \"listaAddress\": [\r\n      \"5eb93f86-5035-4224-a9ae-2f121c6443ee\",\r\n      \"6ee15ed3-47fa-41ec-b363-e4de86d55204\",\r\n      \"02e80b1d-f84e-4e00-a531-531249c4155d\",\r\n       \"74a264c2-29bd-4fa6-a42e-49a7dced0704\"\r\n      ],\r\n  \"listaAircraft\": [\r\n      \"eec2b853-7124-4777-9c9b-66dc9b06d6e5\",\r\n      \"0041fa7c-ab3f-4c31-9eea-2195a02e48fc\",\r\n      \"9d3d4423-5529-433b-944c-3abb6a9a03b2\",\r\n       \"0aedcf0a-471e-4853-86ab-0d9b2c1032c0\"\r\n      ]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -545,7 +545,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"companyName\": \"American Airlines\",\r\n  \"numReg\": \"14567854590321\",\r\n  \"phone\": \"2123456789\",\r\n  \"email\": \"info@aa.com\",\r\n  \"addressId\": \"1aed0847-674d-4940-9e10-abf2f4a6d2bb\",\r\n  \"listaAircraft\": [\r\n      \"c2b9448b-296a-4d07-84a0-ebbd2d045d08\",\r\n      \"9fa611d5-1c29-49af-b220-e2f9555dd6b8\",\r\n      \"a79165b8-1d28-47a5-a3b8-d9252ddcdad2\"\r\n\r\n      \r\n      ]  \r\n}\r\n",
+							"raw": "{\r\n  \"companyName\": \"FLY US AIRLINES\",\r\n  \"numReg\": \"556743\",\r\n  \"phone\": \"+654-664-1345\",\r\n  \"email\": \"flyus.airlines@flyusa.com\",\r\n \"listaAddress\": [\r\n      \"5eb93f86-5035-4224-a9ae-2f121c6443ee\",\r\n      \"6ee15ed3-47fa-41ec-b363-e4de86d55204\",\r\n      \"02e80b1d-f84e-4e00-a531-531249c4155d\",\r\n       \"74a264c2-29bd-4fa6-a42e-49a7dced0704\"\r\n      ],\r\n  \"listaAircraft\": [\r\n      \"eec2b853-7124-4777-9c9b-66dc9b06d6e5\",\r\n      \"0041fa7c-ab3f-4c31-9eea-2195a02e48fc\",\r\n      \"9d3d4423-5529-433b-944c-3abb6a9a03b2\",\r\n       \"0aedcf0a-471e-4853-86ab-0d9b2c1032c0\"\r\n      ]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -553,7 +553,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8888/api/v1/airlines/6ee0e2e7-200b-4b93-85cc-46399d74efd0/update",
+							"raw": "http://localhost:8888/api/v1/airlines/d5dafc33-1044-4f96-aefc-7429bbec56d4/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -563,7 +563,7 @@
 								"api",
 								"v1",
 								"airlines",
-								"6ee0e2e7-200b-4b93-85cc-46399d74efd0",
+								"d5dafc33-1044-4f96-aefc-7429bbec56d4",
 								"update"
 							]
 						}
@@ -1005,7 +1005,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"userName\": \"janesmith\",\r\n\"name\": \"Jane\",\r\n\"lastName\": \"Smith\",\r\n\"numReg\": \"987654-3\",\r\n\"phone\": \"+44 20 7123 4567\",\r\n\"email\": \"janesmith@example.com\",\r\n\"password\": \"password123\",\r\n\"birthdate\": \"1990-09-22\",\r\n \"adressId\": \"\"\r\n}\r\n",
+							"raw": "{\r\n    \"userName\": \"janesmith\",\r\n    \"name\": \"Jane\",\r\n    \"lastName\": \"Smith\",\r\n    \"numReg\": \"987654-3\",\r\n    \"phone\": \"+44 20 7123 4567\",\r\n    \"email\": \"janesmith@example.com\",\r\n    \"password\": \"password123\",\r\n    \"birthdate\": \"1990-09-22\",\r\n    \"adressId\": \"71ed2449-fd49-417e-aff3-05739e65cceb\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
