@@ -41,16 +41,18 @@ public class Airline {
 	@JoinColumn(name = "airline_id", nullable = false, insertable = false, updatable = false)
 	private Set<AirlineAircraft> aircrafts;
 
-	private String addressId;
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = EAGER)
+	@JoinColumn(name = "airline_id", nullable = false, insertable = false, updatable = false)
+	private Set<AirlineAddress> addresses;
 
 	@Builder
-	private Airline(String id, String companyName, String numReg, String phone, String email, String addressId) {
+	private Airline(String id, String companyName, String numReg,
+			String phone, String email) {
 		this.id = id;
 		this.companyName = companyName;
 		this.numReg = numReg;
 		this.phone = phone;
 		this.email = email;
-		this.addressId = addressId;
 		this.ativo = true;
 	}
 
@@ -68,5 +70,13 @@ public class Airline {
 		
 		this.aircrafts.clear();
 		this.aircrafts.addAll(aircrafts);
+	}
+	
+	public void setAddresses(Set<AirlineAddress> addresses) {
+		if (this.addresses == null)
+			this.addresses = new HashSet<AirlineAddress>();
+		
+		this.addresses.clear();
+		this.addresses.addAll(addresses);
 	}
 }

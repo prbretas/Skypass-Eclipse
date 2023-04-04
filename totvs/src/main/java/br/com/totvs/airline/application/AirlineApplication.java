@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import br.com.totvs.airline.application.command.AlterarAirlineCommand;
 import br.com.totvs.airline.application.command.CriarAirlineCommand;
 import br.com.totvs.airline.model.Airline;
+import br.com.totvs.airline.model.AirlineAddress;
 import br.com.totvs.airline.model.AirlineAircraft;
 import br.com.totvs.airline.model.repository.AirlineRepository;
 import lombok.AllArgsConstructor;
@@ -25,15 +26,19 @@ public class AirlineApplication {
 
 		Airline airline = Airline.builder().id(airlineId).companyName(criarAirlineCommand.getCompanyName())
 				.numReg(criarAirlineCommand.getNumReg()).phone(criarAirlineCommand.getPhone())
-				.email(criarAirlineCommand.getEmail()).addressId(criarAirlineCommand.getAddressId()).build();
+				.email(criarAirlineCommand.getEmail()).build();
 
 		Set<AirlineAircraft> listaAircraft = new HashSet<>();
-
 		criarAirlineCommand.getAircrafts().stream().forEach(aircraft -> {
 			listaAircraft.add(AirlineAircraft.of(aircraft, airlineId));
 		});
-
 		airline.setAircrafts(listaAircraft);
+		
+		Set<AirlineAddress> listaAddress = new HashSet<>();
+		criarAirlineCommand.getAddresses().stream().forEach(address -> {
+			listaAddress.add(AirlineAddress.of(address, airlineId));
+		});
+		airline.setAddresses(listaAddress);
 
 		this.repository.save(airline);
 		return airline.getId();
@@ -45,15 +50,18 @@ public class AirlineApplication {
 			airline.setNumReg(alterarAirlineCommand.getNumReg());
 			airline.setPhone(alterarAirlineCommand.getPhone());
 			airline.setEmail(alterarAirlineCommand.getEmail());
-			airline.setAddressId(alterarAirlineCommand.getAddressId());
 
 			Set<AirlineAircraft> listaAircraft = new HashSet<>();
-
 			alterarAirlineCommand.getAircrafts().stream().forEach(aircraft -> {
 				listaAircraft.add(AirlineAircraft.of(aircraft, airline.getId()));
 			});
-
 			airline.setAircrafts(listaAircraft);
+			
+			Set<AirlineAddress> listaAddress = new HashSet<>();
+			alterarAirlineCommand.getAddresses().stream().forEach(address -> {
+				listaAddress.add(AirlineAddress.of(address, airline.getId()));
+			});
+			airline.setAddresses(listaAddress);
 
 			this.repository.save(airline);
 		});

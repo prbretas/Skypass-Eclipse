@@ -13,6 +13,6 @@ public class AlterarAirlineCommand {
 	private String numReg;
 	private String phone;
 	private String email;
-	private String addressId;
+	private Set<String> addresses;
 	private Set<String> aircrafts;
 }

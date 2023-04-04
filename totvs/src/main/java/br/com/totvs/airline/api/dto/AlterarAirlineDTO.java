@@ -17,6 +17,6 @@ public class AlterarAirlineDTO {
 	private String numReg;
 	private String phone;
 	private String email;
-	private String addressId;
+	private Set<String> listaAddress;
 	private Set<String> listaAircraft;
 }
