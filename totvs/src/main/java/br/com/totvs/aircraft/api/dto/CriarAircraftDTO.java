@@ -1,6 +1,8 @@
 package br.com.totvs.aircraft.api.dto;
 
 
+import java.util.Set;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +20,5 @@ public class CriarAircraftDTO {
 	private String latitude;
 	private String longitude;
 	private double cargoWeight;
-	//ADD LISTA DE SEATS
-	//ADD AIRLINE
+	private Set<String> listaSeat;
 }

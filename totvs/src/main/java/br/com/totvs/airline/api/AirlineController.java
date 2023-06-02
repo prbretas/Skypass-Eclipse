@@ -34,18 +34,29 @@ public class AirlineController {
 
 	@PostMapping
 	public String criar(@RequestBody CriarAirlineDTO airlineDTO) {
-		CriarAirlineCommand command = CriarAirlineCommand.builder().companyName(airlineDTO.getCompanyName())
-				.numReg(airlineDTO.getNumReg()).phone(airlineDTO.getPhone()).email(airlineDTO.getEmail())
-				.addresses(airlineDTO.getListaAddress()).aircrafts(airlineDTO.getListaAircraft()).build();
+		CriarAirlineCommand command = CriarAirlineCommand.builder()
+				.companyName(airlineDTO.getCompanyName())
+				.numReg(airlineDTO.getNumReg())
+				.phone(airlineDTO.getPhone())
+				.email(airlineDTO.getEmail())
+				.addresses(airlineDTO.getListaAddress())
+				.aircrafts(airlineDTO.getListaAircraft())
+				.build();
 
 		return airlineApp.criar(command);
 	}
 
 	@PostMapping(path = "/{id}/update")
 	public ResponseEntity<Void> alterar(@PathVariable String id, @RequestBody AlterarAirlineDTO airlineDTO) {
-		AlterarAirlineCommand command = AlterarAirlineCommand.builder().id(id).companyName(airlineDTO.getCompanyName())
-				.numReg(airlineDTO.getNumReg()).phone(airlineDTO.getPhone()).email(airlineDTO.getEmail())
-				.addresses(airlineDTO.getListaAddress()).aircrafts(airlineDTO.getListaAircraft()).build();
+		AlterarAirlineCommand command = AlterarAirlineCommand.builder()
+				.id(id)
+				.companyName(airlineDTO.getCompanyName())
+				.numReg(airlineDTO.getNumReg())
+				.phone(airlineDTO.getPhone())
+				.email(airlineDTO.getEmail())
+				.addresses(airlineDTO.getListaAddress())
+				.aircrafts(airlineDTO.getListaAircraft())
+				.build();
 
 		airlineApp.alterar(command);
 

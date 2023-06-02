@@ -1,8 +1,16 @@
 package br.com.totvs.aircraft.model;
 
+import static javax.persistence.FetchType.EAGER;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -28,8 +36,9 @@ public class Aircraft {
 	private double cargoWeight;
 	private boolean ativo;
 	
-	//ADD LIST SEATS - ONETOMANY
-	//ADD AIRLINE - MANYTOONE
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = EAGER)
+	@JoinColumn(name = "aircraft_id", nullable = false, insertable = false, updatable = false)
+	private Set<AircraftSeat> seats;
 
 	@Builder
 	private Aircraft(String id,String model, String numSerie,
@@ -54,5 +63,13 @@ public class Aircraft {
 	
 	public void inativar() {
 		this.ativo = false;
+	}
+	
+	public void setSeats(Set<AircraftSeat> seats) {
+		if (this.seats == null)
+			this.seats = new HashSet<AircraftSeat>();
+		
+		this.seats.clear();
+		this.seats.addAll(seats);
 	}
 }

@@ -1,17 +1,15 @@
 package br.com.totvs.aircraft.model.repository;
 
 import java.io.Serializable;
+import java.util.Set;
 
-//import javax.persistence.ConstraintMode;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-//import javax.persistence.ForeignKey;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
-//import javax.persistence.JoinColumn;
-//import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-//import org.hibernate.annotations.NotFound;
-//import org.hibernate.annotations.NotFoundAction;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,7 +23,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "aircraft")
 public class AircraftView implements Serializable {
-
 	private static final long serialVersionUID = -6603195158796035142L;
 	@Id
 	private String id;
@@ -36,12 +33,7 @@ public class AircraftView implements Serializable {
 	private String longitude;
 	private double cargoWeight;
 	
-	//EXEMPLO
-	//@OneToOne
-	//@NotFound(action = NotFoundAction.IGNORE)
-	//@JoinColumn(name = "addressId", referencedColumnName = "id", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT), insertable = false, updatable = false)
-	//AddressView address;
-	
-	//ADD LIST SEATS - ONETOMANY
-	//ADD AIRLINE - MANYTOONE
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "aircraft_id")
+	private Set<AircraftSeatView> seats;
 }

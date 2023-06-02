@@ -24,9 +24,13 @@ public class AirlineApplication {
 	public String criar(CriarAirlineCommand criarAirlineCommand) {
 		var airlineId = UUID.randomUUID().toString();
 
-		Airline airline = Airline.builder().id(airlineId).companyName(criarAirlineCommand.getCompanyName())
-				.numReg(criarAirlineCommand.getNumReg()).phone(criarAirlineCommand.getPhone())
-				.email(criarAirlineCommand.getEmail()).build();
+		Airline airline = Airline.builder()
+				.id(airlineId).
+				companyName(criarAirlineCommand.getCompanyName())
+				.numReg(criarAirlineCommand.getNumReg())
+				.phone(criarAirlineCommand.getPhone())
+				.email(criarAirlineCommand.getEmail())
+				.build();
 
 		Set<AirlineAircraft> listaAircraft = new HashSet<>();
 		criarAirlineCommand.getAircrafts().stream().forEach(aircraft -> {

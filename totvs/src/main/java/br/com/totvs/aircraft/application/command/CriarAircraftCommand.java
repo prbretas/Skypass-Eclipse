@@ -1,5 +1,7 @@
 package br.com.totvs.aircraft.application.command;
 
+import java.util.Set;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,6 +14,5 @@ public class CriarAircraftCommand {
 	private String latitude;
 	private String longitude;
 	private double cargoWeight;
-	//private String seats; -----> LISTA DE SEATS
-	//private String airlineId;
+	private Set<String> seats;
 }

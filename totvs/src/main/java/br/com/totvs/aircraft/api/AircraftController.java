@@ -41,8 +41,7 @@ public class AircraftController {
 				.latitude(aircraftDTO.getLatitude())		
 				.longitude(aircraftDTO.getLongitude())
 				.cargoWeight(aircraftDTO.getCargoWeight())
-				//ADD SEATS
-				//ADD AIRLINE
+				.seats(aircraftDTO.getListaSeat())
 				.build();
 
 		return aircraftApp.criar(command);
@@ -58,8 +57,7 @@ public class AircraftController {
 				.latitude(aircraftDTO.getLatitude())
 				.longitude(aircraftDTO.getLongitude())
 				.cargoWeight(aircraftDTO.getCargoWeight())
-				//ADD SEATS
-				//ADD AIRLINE
+				.seats(aircraftDTO.getListaSeat())
 				.build();
 
 		aircraftApp.alterar(command);

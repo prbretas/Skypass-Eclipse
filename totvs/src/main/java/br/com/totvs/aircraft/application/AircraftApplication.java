@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import br.com.totvs.aircraft.application.command.AlterarAircraftCommand;
 import br.com.totvs.aircraft.application.command.CriarAircraftCommand;
 import br.com.totvs.aircraft.model.Aircraft;
+import br.com.totvs.aircraft.model.AircraftSeat;
 import br.com.totvs.aircraft.model.repository.AircraftRepository;
 import lombok.AllArgsConstructor;
 
@@ -20,16 +21,24 @@ public class AircraftApplication {
 	Set<Aircraft> aircrafts = new HashSet<>();
 
 	public String criar(CriarAircraftCommand criarAircraftCommand) {
-		Aircraft aircraft = Aircraft.builder().id(UUID.randomUUID().toString())
+		var aircraftId = UUID.randomUUID().toString();
+		
+		Aircraft aircraft = Aircraft.builder()
+				.id(aircraftId)
 				.model(criarAircraftCommand.getModel())
 				.numSerie(criarAircraftCommand.getNumSerie())
 				.infoSystem(criarAircraftCommand.getInfoSystem())
 				.latitude(criarAircraftCommand.getLatitude())	
 				.longitude(criarAircraftCommand.getLongitude())
 				.cargoWeight(criarAircraftCommand.getCargoWeight())
-				//ADD SEATS
-				//ADD AIRLINE
 				.build();
+		
+		Set<AircraftSeat> listaSeat = new HashSet<>();
+		criarAircraftCommand.getSeats().stream().forEach(seat -> {
+			listaSeat.add(AircraftSeat.of(seat, aircraftId));
+		});
+		aircraft.setSeats(listaSeat);
+		
 
 		this.repository.save(aircraft);
 		return aircraft.getId();
@@ -43,8 +52,13 @@ public class AircraftApplication {
 			aircraft.setLatitude(alterarAircraftCommand.getLatitude());
 			aircraft.setLongitude(alterarAircraftCommand.getLongitude());
 			aircraft.setCargoWeight(alterarAircraftCommand.getCargoWeight());
-			//ADD SEATS
-			//ADD AIRLINE
+			
+			Set<AircraftSeat> listaSeat = new HashSet<>();
+			alterarAircraftCommand.getSeats().stream().forEach(seat -> {
+				listaSeat.add(AircraftSeat.of(seat, aircraft.getId()));
+			});
+			aircraft.setSeats(listaSeat);
+
 			this.repository.save(aircraft);
 		});
 	}
