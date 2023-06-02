@@ -33,6 +33,9 @@ public class TicketSpecification {
 		};
 	}
 	
+	/*
+	 * A DATA JÁ ESTA INSERIDA NO FLIGHT
+	 * 
 	public static Specification<TicketView> queContenhaDateCom(String date) {
 		return new Specification<TicketView>() {
 			private static final long serialVersionUID = -930628243515951063L;
@@ -42,6 +45,8 @@ public class TicketSpecification {
 			}
 		};
 	}
+	*/
+	
 	
 	public static Specification<TicketView> queContenhaTicketPriceCom(String ticketPrice) {
 		return new Specification<TicketView>() {
@@ -53,8 +58,9 @@ public class TicketSpecification {
 		};
 	}
 		
-
+/* FOI REMOVIDO POIS ESTAVA DANDO ALERT DE NUNCA USADO LOCALMENTE
 	private static String likeTerm(String term) {
 		return new StringBuilder().append('%').append(term).append('%').toString();
 	}
+*/
 }

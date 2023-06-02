@@ -42,6 +42,7 @@ public class FlightController {
 				.aircraftId(flightDTO.getAircraftId())
 				.departureAirportId(flightDTO.getDepartureAirportId())
 				.arrivalAirportId(flightDTO.getArrivalAirportId())
+				.tickets(flightDTO.getListaTicket())
 				.build();
 
 		return flightApp.criar(command);
@@ -57,7 +58,8 @@ public class FlightController {
 				.numPassengers(flightDTO.getNumPassengers())
 				.aircraftId(flightDTO.getAircraftId())
 				.departureAirportId(flightDTO.getDepartureAirportId())
-				.arrivalAirportId(flightDTO.getArrivalAirportId())			
+				.arrivalAirportId(flightDTO.getArrivalAirportId())	
+				.tickets(flightDTO.getListaTicket())
 				.build();
 
 		flightApp.alterar(command);

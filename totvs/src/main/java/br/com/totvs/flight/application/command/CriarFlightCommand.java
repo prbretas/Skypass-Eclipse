@@ -1,5 +1,7 @@
 package br.com.totvs.flight.application.command;
 
+import java.util.Set;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,4 +15,5 @@ public class CriarFlightCommand {
 	private String aircraftId;  
 	private String departureAirportId;
 	private String arrivalAirportId;
+	private Set<String> tickets;
 }

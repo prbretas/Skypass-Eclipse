@@ -1,7 +1,14 @@
 package br.com.totvs.flight.model;
 
+import static javax.persistence.FetchType.EAGER;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Builder;
@@ -24,6 +31,12 @@ public class Flight {
 	private String aircraftId;  // (FK_AIRCRAFT_FLIGHT)
 	private String departureAirportId;  // (FK_AIRPORT_FLIGHT)
 	private String arrivalAirportId;  // (FK_AIRPORT_FLIGHT)
+	
+	//Tickets list of the Flight
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = EAGER)
+	@JoinColumn(name = "flight_id", nullable = false, insertable = false, updatable = false)
+	private Set<FlightTicket> tickets;
+	
 
 	@Builder
 	private Flight(String id, String departureTime, String arrivalTime,

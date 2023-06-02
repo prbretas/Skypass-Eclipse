@@ -22,7 +22,7 @@ public class GetAllTicketRequest {
 		if (hasText(this.searchTerm)) {
 			specs = specs.or(TicketSpecification.queContenhaAmountLuggageCom(this.searchTerm));
 			specs = specs.or(TicketSpecification.queContenhaWeightLuggageCom(this.searchTerm));
-			specs = specs.or(TicketSpecification.queContenhaDateCom(this.searchTerm));
+			//specs = specs.or(TicketSpecification.queContenhaDateCom(this.searchTerm));
 			specs = specs.or(TicketSpecification.queContenhaTicketPriceCom(this.searchTerm));
 		
 		
@@ -32,10 +32,10 @@ public class GetAllTicketRequest {
 			
 			if (hasText(this.weightLuggage))
 				specs = specs.and(TicketSpecification.queContenhaWeightLuggageCom(this.weightLuggage));
-
-			if (hasText(this.date))
+			/*
+				if (hasText(this.date))
 				specs = specs.and(TicketSpecification.queContenhaDateCom(this.date));
-			
+			*/
 			if (hasText(this.ticketPrice))
 				specs = specs.and(TicketSpecification.queContenhaTicketPriceCom(this.ticketPrice));
 			

@@ -23,10 +23,10 @@ public class TicketApplication {
 		Ticket ticket = Ticket.builder().id(UUID.randomUUID().toString())
 				.amountLuggage(criarTicketCommand.getAmountLuggage())
 				.weightLuggage(criarTicketCommand.getWeightLuggage())
-				.date(criarTicketCommand.getDate())
+				//.date(criarTicketCommand.getDate()) ----> A DATA JA ESTA INSERIDA NO FLIGHT
 				.ticketPrice(criarTicketCommand.getTicketPrice())
 				.clientId(criarTicketCommand.getClientId())
-				.flightId(criarTicketCommand.getFlightId())
+				//.flightId(criarTicketCommand.getFlightId())
 				.seatId(criarTicketCommand.getSeatId())
 				.build();
 
@@ -39,10 +39,10 @@ public class TicketApplication {
 		this.repository.findById(alterarTicketCommand.getId()).ifPresent(ticket -> {
 			ticket.setAmountLuggage(alterarTicketCommand.getAmountLuggage());
 			ticket.setWeightLuggage(alterarTicketCommand.getWeightLuggage());
-			ticket.setDate(alterarTicketCommand.getDate());
+			//ticket.setDate(alterarTicketCommand.getDate());
 			ticket.setTicketPrice(alterarTicketCommand.getTicketPrice());
 			ticket.setClientId(alterarTicketCommand.getClientId());
-			ticket.setFlightId(alterarTicketCommand.getFlightId());
+			//ticket.setFlightId(alterarTicketCommand.getFlightId());
 			ticket.setSeatId(alterarTicketCommand.getSeatId());			
 			this.repository.save(ticket);
 		});

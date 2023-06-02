@@ -1,6 +1,8 @@
 package br.com.totvs.flight.api.dto;
 
 
+import java.util.Set;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,4 +21,5 @@ public class CriarFlightDTO {
 	private String aircraftId;  
 	private String departureAirportId;
 	private String arrivalAirportId;
+	private Set<String> listaTicket;
 }

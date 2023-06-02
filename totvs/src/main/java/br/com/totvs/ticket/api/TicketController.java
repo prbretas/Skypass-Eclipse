@@ -37,10 +37,10 @@ public class TicketController {
 		CriarTicketCommand command = CriarTicketCommand.builder()
 				.amountLuggage(ticketDTO.getAmountLuggage())
 				.weightLuggage(ticketDTO.getWeightLuggage())
-				.date(ticketDTO.getDate())
+				//.date(ticketDTO.getDate())
 				.ticketPrice(ticketDTO.getTicketPrice())
 				.clientId(ticketDTO.getClientId())
-				.flightId(ticketDTO.getFlightId())
+				//.flightId(ticketDTO.getFlightId())
 				.seatId(ticketDTO.getSeatId())
 				.build();
 
@@ -53,10 +53,10 @@ public class TicketController {
 				.id(id)
 				.amountLuggage(ticketDTO.getAmountLuggage())
 				.weightLuggage(ticketDTO.getWeightLuggage())
-				.date(ticketDTO.getDate())
+				//.date(ticketDTO.getDate())
 				.ticketPrice(ticketDTO.getTicketPrice())
 				.clientId(ticketDTO.getClientId())
-				.flightId(ticketDTO.getFlightId())
+				//.flightId(ticketDTO.getFlightId())
 				.seatId(ticketDTO.getSeatId())	
 				.build();
 

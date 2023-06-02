@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 public class CriarTicketDTO {
 	private int amountLuggage;
 	private double weightLuggage;
-	private String date;
+	//private String date;
 	private double ticketPrice;
 	private String clientId;  
-	private String flightId;  
+	//private String flightId;  
 	private String seatId;  
 }

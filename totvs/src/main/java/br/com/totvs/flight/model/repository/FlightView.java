@@ -1,12 +1,16 @@
 package br.com.totvs.flight.model.repository;
 
 import java.io.Serializable;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ForeignKey;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -37,11 +41,7 @@ public class FlightView implements Serializable {
 	private String date;
 	private String numPassengers; //TICKETS TRUE COM ID DO FLIGHT
 	private boolean ativo;
-	
-	private String aircraftId;  // (FK_AIRCRAFT_FLIGHT)
-	private String departureAirportId;  // (FK_AIRPORT_FLIGHT)
-	private String arrivalAirportId;
-	
+		
 	@OneToOne
 	@NotFound(action = NotFoundAction.IGNORE)
 	@JoinColumn(name = "aircraftId", referencedColumnName = "id", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT), insertable = false, updatable = false)
@@ -56,5 +56,9 @@ public class FlightView implements Serializable {
 	@NotFound(action = NotFoundAction.IGNORE)
 	@JoinColumn(name = "arrivalAirportId", referencedColumnName = "id", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT), insertable = false, updatable = false)
 	AirportView arrivalAirport;
+	
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "flight_id")
+	private Set<FlightTicketView> tickets;
 	
 }

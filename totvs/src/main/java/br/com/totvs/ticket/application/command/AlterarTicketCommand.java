@@ -9,9 +9,9 @@ public class AlterarTicketCommand {
 	private String id;
 	private int amountLuggage;
 	private double weightLuggage;
-	private String date;
+	//private String date; ---> A DATA JA ESTA INSERIDA NO FLIGHT
 	private double ticketPrice;
 	private String clientId; 
-	private String flightId;  
+	//private String flightId;  
 	private String seatId;  
 }

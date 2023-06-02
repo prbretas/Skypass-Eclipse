@@ -13,9 +13,9 @@ public class GetAllFlightRequest {
 	private String departureTime;
 	private String arrivalTime;
 	private String date;
-	private String aircraftId; // NAO SEI SE É NECESSARIO
-	private String departureAirportId; // NAO SEI SE É NECESSARIO
-	private String arrivalAirportId; // NAO SEI SE É NECESSARIO
+	private String aircraftId; 
+	private String departureAirportId;
+	private String arrivalAirportId;
 	private String searchTerm;
 
 	public Specification<FlightView> buildSpecification() {

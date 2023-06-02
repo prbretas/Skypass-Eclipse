@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import br.com.totvs.flight.model.FlightTicket;
 import br.com.totvs.flight.application.command.AlterarFlightCommand;
 import br.com.totvs.flight.application.command.CriarFlightCommand;
 import br.com.totvs.flight.model.Flight;
@@ -20,7 +21,10 @@ public class FlightApplication {
 	Set<Flight> flights = new HashSet<>();
 
 	public String criar(CriarFlightCommand criarFlightCommand) {
-		Flight flight = Flight.builder().id(UUID.randomUUID().toString())
+		var flightId = UUID.randomUUID().toString();
+		
+		Flight flight = Flight.builder()
+				.id(flightId)
 				.departureTime(criarFlightCommand.getDepartureTime())
 				.arrivalTime(criarFlightCommand.getArrivalTime())
 				.date(criarFlightCommand.getDate())
@@ -29,9 +33,14 @@ public class FlightApplication {
 				.departureAirportId(criarFlightCommand.getDepartureAirportId())
 				.arrivalAirportId(criarFlightCommand.getArrivalAirportId())
 				.build();
-
+		
+		Set<FlightTicket> listaTicket = new HashSet<>();
+		criarFlightCommand.getTickets().stream().forEach(ticket -> {
+			listaTicket.add(FlightTicket.of(ticket, flightId));
+		});
+		flight.setTickets(listaTicket);
+	
 		this.repository.save(flight);
-
 		return flight.getId();
 	}
 
@@ -44,6 +53,14 @@ public class FlightApplication {
 			flight.setAircraftId(alterarFlightCommand.getAircraftId());
 			flight.setDepartureAirportId(alterarFlightCommand.getDepartureAirportId());
 			flight.setArrivalAirportId(alterarFlightCommand.getArrivalAirportId());
+			
+			Set<FlightTicket> listaTicket = new HashSet<>();
+			alterarFlightCommand.getTickets().stream().forEach(ticket -> {
+				listaTicket.add(FlightTicket.of(ticket, flight.getId()));
+			});
+			flight.setTickets(listaTicket);
+			
+			
 			
 			this.repository.save(flight);
 		});
