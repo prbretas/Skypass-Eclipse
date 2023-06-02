@@ -15,7 +15,7 @@ public class CriarTicketDTO {
 	private double weightLuggage;
 	//private String date;
 	private double ticketPrice;
-	private String clientId;  
+	//private String clientId;  
 	//private String flightId;  
 	private String seatId;  
 }

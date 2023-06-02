@@ -1,8 +1,16 @@
 package br.com.totvs.client.model;
 
+import static javax.persistence.FetchType.EAGER;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -32,6 +40,11 @@ public class Client {
 	private boolean ativo;
 	
 	private String addressId; //fk_address
+	
+	//LISTA DE TICKETS - PASSAGENS
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = EAGER)
+	@JoinColumn(name = "client_id", nullable = false, insertable = false, updatable = false)
+	private Set<ClientTicket> tickets;
 
 	@Builder
 	private Client(String id, String userName, String name,
@@ -58,4 +71,14 @@ public class Client {
 	public void inativar() {
 		this.ativo = false;
 	}
+	
+	
+	public void setTickets(Set<ClientTicket> tickets) {
+		if (this.tickets == null)
+			this.tickets = new HashSet<ClientTicket>();
+		
+		this.tickets.clear();
+		this.tickets.addAll(tickets);
+	}
+	
 }

@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
-import br.com.totvs.client.model.repository.ClientView;
+//import br.com.totvs.client.model.repository.ClientView;
 //import br.com.totvs.flight.model.repository.FlightView;
 import br.com.totvs.seat.model.repository.SeatView;
 import lombok.AllArgsConstructor;
@@ -39,10 +39,12 @@ public class TicketView implements Serializable {
 	private double ticketPrice;
 	private boolean ativo;
 	
+	/* ESTÁ NA TABELA INTERMEDIARIA (ClientTicket) EM CLIENT
 	@OneToOne
 	@NotFound(action = NotFoundAction.IGNORE)
 	@JoinColumn(name = "clientId", referencedColumnName = "id", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT), insertable = false, updatable = false)
 	ClientView client;
+	*/
 	
 	/*ESTÁ NA TABELA INTERMEDIARIA (FlightTicket) EM FLIGHT
 	 * 

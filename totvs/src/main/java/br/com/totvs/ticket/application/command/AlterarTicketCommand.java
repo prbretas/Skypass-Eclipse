@@ -11,7 +11,7 @@ public class AlterarTicketCommand {
 	private double weightLuggage;
 	//private String date; ---> A DATA JA ESTA INSERIDA NO FLIGHT
 	private double ticketPrice;
-	private String clientId; 
+	//private String clientId; 
 	//private String flightId;  
 	private String seatId;  
 }

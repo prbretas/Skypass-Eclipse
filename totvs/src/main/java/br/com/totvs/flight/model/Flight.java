@@ -2,6 +2,7 @@ package br.com.totvs.flight.model;
 
 import static javax.persistence.FetchType.EAGER;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -60,4 +61,15 @@ public class Flight {
 	public void inativar() {
 		this.ativo = false;
 	}
+	
+	public void setTickets(Set<FlightTicket> tickets) {
+		if (this.tickets == null)
+			this.tickets = new HashSet<FlightTicket>();
+		
+		this.tickets.clear();
+		this.tickets.addAll(tickets);
+	}
+	
+	
+	
 }

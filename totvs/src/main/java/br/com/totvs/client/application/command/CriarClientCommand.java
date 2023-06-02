@@ -1,5 +1,7 @@
 package br.com.totvs.client.application.command;
 
+import java.util.Set;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -15,4 +17,5 @@ public class CriarClientCommand {
 	private String password;
 	private String birthdate;
 	private String addressId;
+	private Set<String> tickets;
 }

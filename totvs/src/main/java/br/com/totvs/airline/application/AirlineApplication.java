@@ -25,8 +25,8 @@ public class AirlineApplication {
 		var airlineId = UUID.randomUUID().toString();
 
 		Airline airline = Airline.builder()
-				.id(airlineId).
-				companyName(criarAirlineCommand.getCompanyName())
+				.id(airlineId)
+				.companyName(criarAirlineCommand.getCompanyName())
 				.numReg(criarAirlineCommand.getNumReg())
 				.phone(criarAirlineCommand.getPhone())
 				.email(criarAirlineCommand.getEmail())

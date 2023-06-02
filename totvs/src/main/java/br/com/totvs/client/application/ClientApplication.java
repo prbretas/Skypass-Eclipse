@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import br.com.totvs.client.model.ClientTicket;
 import br.com.totvs.client.application.command.AlterarClientCommand;
 import br.com.totvs.client.application.command.CriarClientCommand;
 import br.com.totvs.client.model.Client;
@@ -20,7 +21,10 @@ public class ClientApplication {
 	Set<Client> clients = new HashSet<>();
 
 	public String criar(CriarClientCommand criarClientCommand) {
-		Client client = Client.builder().id(UUID.randomUUID().toString())
+		var clientId = UUID.randomUUID().toString();
+		
+		Client client = Client.builder()
+				.id(clientId)
 				.userName(criarClientCommand.getUserName())
 				.name(criarClientCommand.getName())
 				.lastName(criarClientCommand.getLastName())
@@ -31,9 +35,15 @@ public class ClientApplication {
 				.birthdate(criarClientCommand.getBirthdate())
 				.addressId(criarClientCommand.getAddressId())
 				.build();
-
+		
+		
+		Set<ClientTicket> listaTicket = new HashSet<>();
+		criarClientCommand.getTickets().stream().forEach(ticket -> {
+			listaTicket.add(ClientTicket.of(ticket, clientId));
+		});
+		client.setTickets(listaTicket);
+		
 		this.repository.save(client);
-
 		return client.getId();
 	}
 
@@ -48,6 +58,12 @@ public class ClientApplication {
 			client.setPassword(alterarClientCommand.getPassword());
 			client.setBirthdate(alterarClientCommand.getBirthdate());
 			client.setAddressId(alterarClientCommand.getAddressId());
+			
+			Set<ClientTicket> listaTicket = new HashSet<>();
+			alterarClientCommand.getTickets().stream().forEach(ticket -> {
+				listaTicket.add(ClientTicket.of(ticket, client.getId()));
+			});
+			client.setTickets(listaTicket);
 
 			this.repository.save(client);
 		});

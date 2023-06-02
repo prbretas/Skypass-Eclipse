@@ -1,5 +1,7 @@
 package br.com.totvs.client.api.dto;
 
+import java.util.Set;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,5 +22,6 @@ public class AlterarClientDTO {
 	private String password;
 	private String birthdate;
 	private String addressId;
+	private Set<String> listaTicket;
 	
 }

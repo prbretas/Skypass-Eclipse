@@ -30,7 +30,7 @@ public class AirlineController {
 	@Autowired
 	AirlineApplication airlineApp;
 
-	AirlineRepositoryView repositoryView;
+	private final AirlineRepositoryView repositoryView;
 
 	@PostMapping
 	public String criar(@RequestBody CriarAirlineDTO airlineDTO) {

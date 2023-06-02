@@ -39,7 +39,7 @@ public class TicketController {
 				.weightLuggage(ticketDTO.getWeightLuggage())
 				//.date(ticketDTO.getDate())
 				.ticketPrice(ticketDTO.getTicketPrice())
-				.clientId(ticketDTO.getClientId())
+				//.clientId(ticketDTO.getClientId())
 				//.flightId(ticketDTO.getFlightId())
 				.seatId(ticketDTO.getSeatId())
 				.build();
@@ -55,7 +55,7 @@ public class TicketController {
 				.weightLuggage(ticketDTO.getWeightLuggage())
 				//.date(ticketDTO.getDate())
 				.ticketPrice(ticketDTO.getTicketPrice())
-				.clientId(ticketDTO.getClientId())
+				//.clientId(ticketDTO.getClientId())
 				//.flightId(ticketDTO.getFlightId())
 				.seatId(ticketDTO.getSeatId())	
 				.build();

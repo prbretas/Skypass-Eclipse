@@ -25,8 +25,8 @@ public class TicketApplication {
 				.weightLuggage(criarTicketCommand.getWeightLuggage())
 				//.date(criarTicketCommand.getDate()) ----> A DATA JA ESTA INSERIDA NO FLIGHT
 				.ticketPrice(criarTicketCommand.getTicketPrice())
-				.clientId(criarTicketCommand.getClientId())
-				//.flightId(criarTicketCommand.getFlightId())
+				//.clientId(criarTicketCommand.getClientId()) ---> ESTA NA TABELA INTERMEDIARIA CLIENTETICKET
+				//.flightId(criarTicketCommand.getFlightId())--->  ESTA NA TABELA INTERMEDIARIA FLIGHTETICKET
 				.seatId(criarTicketCommand.getSeatId())
 				.build();
 
@@ -41,7 +41,7 @@ public class TicketApplication {
 			ticket.setWeightLuggage(alterarTicketCommand.getWeightLuggage());
 			//ticket.setDate(alterarTicketCommand.getDate());
 			ticket.setTicketPrice(alterarTicketCommand.getTicketPrice());
-			ticket.setClientId(alterarTicketCommand.getClientId());
+			//ticket.setClientId(alterarTicketCommand.getClientId());
 			//ticket.setFlightId(alterarTicketCommand.getFlightId());
 			ticket.setSeatId(alterarTicketCommand.getSeatId());			
 			this.repository.save(ticket);

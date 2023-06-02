@@ -44,6 +44,7 @@ public class ClientController {
 				.password(clientDTO.getPassword())
 				.birthdate(clientDTO.getBirthdate())
 				.addressId(clientDTO.getAddressId())
+				.tickets(clientDTO.getListaTicket())
 				.build();
 
 		return clientApp.criar(command);
@@ -60,7 +61,8 @@ public class ClientController {
 				.email(clientDTO.getPhone())
 				.password(clientDTO.getPassword())
 				.birthdate(clientDTO.getBirthdate())
-				.addressId(clientDTO.getAddressId())				
+				.addressId(clientDTO.getAddressId())
+				.tickets(clientDTO.getListaTicket())
 				.build();
 
 		clientApp.alterar(command);
