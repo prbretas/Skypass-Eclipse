@@ -60,7 +60,6 @@ public class Client {
 		this.password = password;
 		this.birthdate = birthdate;
 		this.addressId = addressId;
-		
 		this.ativo = true;
 	}
 	

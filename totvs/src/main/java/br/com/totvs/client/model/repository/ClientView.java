@@ -51,7 +51,7 @@ public class ClientView implements Serializable {
 	AddressView address;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "ticket_id")
+	@JoinColumn(name = "client_id")
 	private Set<ClientTicketView> tickets;
 	
 }
