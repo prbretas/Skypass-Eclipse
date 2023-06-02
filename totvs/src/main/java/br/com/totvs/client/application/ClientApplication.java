@@ -36,7 +36,6 @@ public class ClientApplication {
 				.addressId(criarClientCommand.getAddressId())
 				.build();
 		
-		
 		Set<ClientTicket> listaTicket = new HashSet<>();
 		criarClientCommand.getTickets().stream().forEach(ticket -> {
 			listaTicket.add(ClientTicket.of(ticket, clientId));

@@ -23,8 +23,7 @@ public class AirportSpecification {
 			}
 		};
 	}
-	
-		
+			
 	public static Specification<AirportView> queContenhaIataCodeCom(String iataCode) {
 		return new Specification<AirportView>() {
 
@@ -57,7 +56,6 @@ public class AirportSpecification {
 			}
 		};
 	}
-	
 	
 	private static String likeTerm(String term) {
 		return new StringBuilder().append('%').append(term).append('%').toString();

@@ -23,7 +23,6 @@ public class AirlineSpecification {
 			}
 		};
 	}
-	
 		
 	public static Specification<AirlineView> queContenhaNumRegCom(String numReg) {
 		return new Specification<AirlineView>() {
@@ -57,7 +56,6 @@ public class AirlineSpecification {
 			}
 		};
 	}
-	
 	
 	private static String likeTerm(String term) {
 		return new StringBuilder().append('%').append(term).append('%').toString();

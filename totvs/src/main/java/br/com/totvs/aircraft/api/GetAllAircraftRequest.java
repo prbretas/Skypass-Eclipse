@@ -23,7 +23,6 @@ public class GetAllAircraftRequest {
 			specs = specs.or(AircraftSpecification.queContenhaNumSerieCom(this.searchTerm));
 			specs = specs.or(AircraftSpecification.queContenhaInfoSystemCom(this.searchTerm));
 		
-		
 		} else {
 			if (hasText(this.model))
 				specs = specs.and(AircraftSpecification.queContenhaModelCom(this.model));
@@ -33,7 +32,6 @@ public class GetAllAircraftRequest {
 			
 			if (hasText(this.infoSystem))
 				specs = specs.and(AircraftSpecification.queContenhaInfoSystemCom(this.infoSystem));
-			
 		}
 
 		return specs;

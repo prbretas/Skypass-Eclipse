@@ -53,8 +53,6 @@ public class GetAllClientRequest {
 			
 			if (hasText(this.birthdate))
 				specs = specs.and(ClientSpecification.queContenhaBirthdateCom(this.birthdate));
-			
-	
 		}
 
 		return specs;

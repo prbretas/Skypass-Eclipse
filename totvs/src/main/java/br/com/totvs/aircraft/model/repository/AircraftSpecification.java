@@ -46,7 +46,6 @@ public class AircraftSpecification {
 		};
 	}
 	
-	
 	private static String likeTerm(String term) {
 		return new StringBuilder().append('%').append(term).append('%').toString();
 	}

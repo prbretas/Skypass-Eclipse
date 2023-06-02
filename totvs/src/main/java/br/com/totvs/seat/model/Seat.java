@@ -24,7 +24,6 @@ public class Seat {
 	@Enumerated(EnumType.STRING)
 	private Category category;
 	private boolean ativo;
-	
 
 	@Builder
 	private Seat(String id, String seatName, Category category) {

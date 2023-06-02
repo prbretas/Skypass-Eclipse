@@ -21,17 +21,13 @@ public class GetAllSeatRequest {
 			specs = specs.or(SeatSpecification.queContenhaSeatNameCom(this.searchTerm));
 			specs = specs.or(SeatSpecification.queContenhaCategoryCom(this.searchTerm));
 	
-		
-		
 		} else {
 			if (hasText(this.seatName))
 				specs = specs.and(SeatSpecification.queContenhaSeatNameCom(this.seatName));
 			
 			if (hasText(this.category))
 				specs = specs.and(SeatSpecification.queContenhaCategoryCom(this.category));
-			
 			}
-
 		return specs;
 	}
 }

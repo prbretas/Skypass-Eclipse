@@ -25,7 +25,6 @@ public class GetAllAirportRequest {
 			specs = specs.or(AirportSpecification.queContenhaPhoneCom(this.searchTerm));
 			specs = specs.or(AirportSpecification.queContenhaEmailCom(this.searchTerm));
 		
-		
 		} else {
 			if (hasText(this.airportName))
 				specs = specs.and(AirportSpecification.queContenhaAirportNameCom(this.airportName));
@@ -38,7 +37,6 @@ public class GetAllAirportRequest {
 
 			if (hasText(this.email))
 				specs = specs.and(AirportSpecification.queContenhaEmailCom(this.email));
-			
 		}
 
 		return specs;

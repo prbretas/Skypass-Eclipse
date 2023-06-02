@@ -32,7 +32,6 @@ public class AirlineView implements Serializable {
 	private String phone;
 	private String email;
 
-
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "airline_id")
 	private Set<AirlineAircraftView> aircrafts;

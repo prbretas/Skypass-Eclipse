@@ -59,9 +59,7 @@ public class FlightApplication {
 				listaTicket.add(FlightTicket.of(ticket, flight.getId()));
 			});
 			flight.setTickets(listaTicket);
-			
-			
-			
+				
 			this.repository.save(flight);
 		});
 	}

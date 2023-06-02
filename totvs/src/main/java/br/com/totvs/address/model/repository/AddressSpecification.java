@@ -23,7 +23,6 @@ public class AddressSpecification {
 			}
 		};
 	}
-	
 		
 	public static Specification<AddressView> queContenhaCityCom(String city) {
 		return new Specification<AddressView>() {

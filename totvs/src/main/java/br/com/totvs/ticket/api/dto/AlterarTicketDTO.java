@@ -17,6 +17,5 @@ public class AlterarTicketDTO {
 	private double ticketPrice;
 	//private String clientId;  
 	//private String flightId; 
-	private String seatId;  
-	
+	private String seatId;  	
 }

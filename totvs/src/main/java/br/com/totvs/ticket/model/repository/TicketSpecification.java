@@ -47,7 +47,6 @@ public class TicketSpecification {
 	}
 	*/
 	
-	
 	public static Specification<TicketView> queContenhaTicketPriceCom(String ticketPrice) {
 		return new Specification<TicketView>() {
 			private static final long serialVersionUID = 5149273053539333665L;

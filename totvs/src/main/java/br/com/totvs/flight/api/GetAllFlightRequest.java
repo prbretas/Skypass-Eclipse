@@ -28,8 +28,7 @@ public class GetAllFlightRequest {
 			specs = specs.or(FlightSpecification.queContenhaAircraftIdCom(this.searchTerm));
 			specs = specs.or(FlightSpecification.queContenhaDepartureAirportIdCom(this.searchTerm));
 			specs = specs.or(FlightSpecification.queContenhaArrivalAirportIdCom(this.searchTerm));
-		
-		
+	
 		} else {
 			if (hasText(this.departureTime))
 				specs = specs.and(FlightSpecification.queContenhaDepartureTimeCom(this.departureTime));
@@ -48,9 +47,7 @@ public class GetAllFlightRequest {
 			
 			if (hasText(this.arrivalAirportId))
 				specs = specs.and(FlightSpecification.queContenhaArrivalAirportIdCom(this.arrivalAirportId));
-
 			}
-
 		return specs;
 	}
 }
