@@ -19,11 +19,11 @@ Uma API para gerenciar um sistema de passagens aéreas, onde o objetivo é a ven
 
 <hr>
 
-<a href="https://docs.google.com/document/d/1ElRBBApK8j2OIPLHJ2G7ijFpY8Qq2nvwOsQtGmz6KdQ/edit?usp=sharing">SKYPASS DOCUMENTAÇÃO</a>
+<a href="https://docs.google.com/document/d/1ElRBBApK8j2OIPLHJ2G7ijFpY8Qq2nvwOsQtGmz6KdQ/edit?usp=sharing" target="_blank">SKYPASS DOCUMENTAÇÃO</a>
 
-<a href="https://docs.google.com/document/d/1nfFfXf5ALRQP5Y97zNybf7_1YFQM3KTI1khI3msPeog/edit?usp=sharing">ALGUNS EXEMPLOS DE DADOS JSON</a>
+<a href="https://docs.google.com/document/d/1nfFfXf5ALRQP5Y97zNybf7_1YFQM3KTI1khI3msPeog/edit?usp=sharing" target="_blank">ALGUNS EXEMPLOS DE DADOS JSON</a>
 
-<a href="https://miro.com/welcomeonboard/REl6MnhVcmVKTDBERzVpVDRPWEJqSkM5WUh5UVRMU2VxM3UwYXZTbnYxT1lFb1BsT0xrWVI4ekM4OEREUGxvMHwzNDU4NzY0NTQ0MTc2MDgyOTcxfDI=?share_link_id=810734589044">FLUXOGRAMA - MIRO</a>
+<a href="https://miro.com/welcomeonboard/REl6MnhVcmVKTDBERzVpVDRPWEJqSkM5WUh5UVRMU2VxM3UwYXZTbnYxT1lFb1BsT0xrWVI4ekM4OEREUGxvMHwzNDU4NzY0NTQ0MTc2MDgyOTcxfDI=?share_link_id=810734589044" target="_blank">FLUXOGRAMA - MIRO</a>
 
 
  # Autores
